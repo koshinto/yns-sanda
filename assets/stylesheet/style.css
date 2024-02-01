@@ -123,6 +123,7 @@ address {
   border: #ccc 1px solid;
 }
 @media screen and (max-width: 1023px) {
+  #header-nav a { margin-left: 12px; }
   #global-nav,
   #sub-nav,
   #search-form {
