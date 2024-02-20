@@ -2,6 +2,7 @@
 :root {
   --primary-color: #1a306a;
   --main-bg-color: #f8f9ff;
+  --gray-color: #9cb1e3;
 }
 ::placeholder { color: #ccc; }
 .dark { display: none; }
@@ -143,23 +144,35 @@ address {
   }
   #search-form input[type="text"] {
     width: 100%;
-
   }
 }
 @media screen and (min-width: 1024px) {
   #header-nav {
-    grid-template-columns: 200px repeat(3, auto);
+    grid-template-columns: 250px repeat(3, auto);
     grid-template-rows: repeat(2, 54px);
+  }
+  #header-sub-group {
+    grid-column: 2 / -1;
+    grid-row: 1 / 3;
+    align-items: center;
   }
   #header-logo { margin-left: 10px; }
   #menu-open-btn { display: none; }
   #global-nav {
+    height: 100%;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
   #global-nav ul {
     justify-content: center;
     column-gap: 30px;
+  }
+  #global-nav li {
+    color: var(--gray-color);
+    transition-duration: 300ms;    
+  }
+  #global-nav li:hover {
+    color: var(--primary-color);
   }
   #sub-nav {
     grid-column: 2 / 3;
@@ -202,4 +215,56 @@ address {
 
 .map iframe {
   width: 100%;
+}
+
+/* フッター */
+footer {
+  .footer-area {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .sitemaps {
+    grid-column: 1 / -1;
+    margin: 50px 0;
+
+    .sitemap {
+      margin: 25px 0;
+
+      .menu {
+        & a {
+          font-size: .85em;
+          padding: 10px 15px;
+        }
+        .menu a {
+          padding-left: 15px;
+        }
+      }
+    }
+
+    .sitemap-head {
+      margin: 0 0 5px;
+      color: var(--gray-color);
+      font-size: 1em;
+      font-weight: normal;
+    }
+  }
+
+  .logo-area { grid-column: 1 / -1; }
+  .logo {
+    display: block;
+    max-width: 200px;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+    margin: 5px 0 10px;
+    color: var(--gray-color);
+    & small {
+      display: block;
+      font-size: .75em;
+      padding-left: 15px;
+    }
+  }
 }

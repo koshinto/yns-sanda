@@ -11,7 +11,8 @@ add_image_size( 'post', 320, 240, true );
 register_nav_menus( array(
   'place_global' => 'グローバル',
   'place_sub_global' => 'サブメニュー',
-  'place_footer' => 'フッター'
+  'place_footer_company' => 'フッター企業情報',
+  'place_footer_service' => 'フッターサービス情報'
 ) );
 
 // JavaScript読み込み
