@@ -43,6 +43,31 @@ address {
   font-style: normal;
 }
 
+.key-visual {
+  width: 100vw;
+  overflow-y: hidden;
+
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    
+    & li {
+      min-width: 100%;
+    }
+  
+    & a {
+      display: block;
+    }
+  
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 
 /* ----- メニュー ----- */
 /* リストのインデント消去 */

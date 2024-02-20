@@ -4,11 +4,18 @@
     $args = array( 'category_name' => 'key-visual' );
     $key_visual_posts = get_posts( $args );
     if ( $key_visual_posts ):
+  ?>
+  <div class="key-visual">
+    <ul>
+  <?php
       foreach ( $key_visual_posts as $post ):
         setup_postdata( $post );
   ?>
-    <p><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'key-visual' ); ?></a></p>
-  <?php endforeach; endif; ?>
+    <li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'key-visual' ); ?></a></li>
+  <?php endforeach; ?>
+    </ul>
+  </div>  <!-- key-visual -->
+  <?php endif; ?>
 
   <h2>新着</h2>
   <ul class="post">
