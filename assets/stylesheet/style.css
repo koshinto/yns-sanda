@@ -1,4 +1,6 @@
-@import url(./reset.css);
+@layer reset;
+@import url(./reset.css) layer(reset);
+
 :root {
   --primary-color: #1a306a;
   --main-bg-color: #f8f9ff;
