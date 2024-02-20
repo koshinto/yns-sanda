@@ -12,7 +12,7 @@
 
 /* ----- 共通 ----- */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "BIZ UDGothic", sans-serif;
   font-size: 16px; /* 基準サイズ */
   font-weight: 400;
   color: rgb(70, 91, 150);
@@ -77,6 +77,9 @@ address {
   
   .topics,
   .infomation {
+    & h2 {
+      font-weight: 700;
+    }
     .post-date {
       margin: 10px 0 0;
       font-size: 12px;
