@@ -132,7 +132,7 @@ address {
       border-radius: 15px;
     }
   }
-  
+
   .post-title:hover { text-decoration: underline; }
 }
 
@@ -185,6 +185,9 @@ address {
 
 /* ----- ヘッダー ----- */
 /* グローバルナビグループ */
+header {
+  a:hover { text-decoration: underline; }
+}
 #header-nav-wrap { border-bottom: #eee 1px solid; }
 #header-nav {
   display: grid;
