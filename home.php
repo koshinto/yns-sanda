@@ -16,22 +16,54 @@
     </ul>
   </div>  <!-- key-visual -->
   <?php endif; ?>
-
-  <h2>新着</h2>
-  <ul class="post">
-  <?php
-    // 新着の投稿を表示
-    $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'blog' ) );
-    if ( $the_query->have_posts() ): while ( $the_query->have_posts() ): $the_query->the_post();
+  
+  <section class="post-sec">
+  <?php 
+  // 新着の投稿を表示
+  $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'blog' ) );
+  if ( $the_query->have_posts() ): 
   ?>
-    <li class="post-item">
-      <a href="<?php the_permalink(); ?>">
-        <div class="thumbnail"><?php the_post_thumbnail( 'post' ); ?></div>
-        <p><?php the_title(); ?></p>
-      </a>
-    </li>
-  <?php endwhile; endif; ?>
-  </ul>
+    <div class="topics">
+      <h2>トピックス</h2>
+      <ul class="post">
+      <?php
+        while ( $the_query->have_posts() ): $the_query->the_post();
+      ?>
+        <li class="post-item">
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail(); ?>
+            <div class="post-text">
+              <p class="post-date"><?php echo get_the_date(); ?></p>
+              <p class="post-title"><?php the_title(); ?></p>
+            </div>
+          </a>
+        </li>
+      <?php endwhile; ?>
+      </ul>
+    </div>
+  <?php
+    endif;
+    // 新着のお知らせを表示
+    $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'infomation' ) );
+    if ( $the_query->have_posts() ): 
+  ?>
+    <div class="infomation">
+      <h2>お知らせ</h2>
+      <ul class="post">
+      <?php
+        while ( $the_query->have_posts() ): $the_query->the_post();
+      ?>
+        <li class="post-item">
+          <a href="<?php the_permalink(); ?>">
+            <p class="post-date"><?php echo get_the_date(); ?></p>
+            <p class="post-title"><?php the_title(); ?></p>
+          </a>
+        </li>
+      <?php endwhile; ?>
+      </ul>
+    </div>
+    <?php endif; ?>
+  </section>
 
   <section class="brands">
     <h2>取扱商品</h2>

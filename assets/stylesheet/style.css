@@ -3,6 +3,7 @@
 
 :root {
   --primary-color: #1a306a;
+  --primary-deep-color: #0f1f4b;
   --main-bg-color: #f8f9ff;
   --gray-color: #9cb1e3;
 }
@@ -65,6 +66,66 @@ address {
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+.post-sec /* section */ {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 50px 20px;
+  row-gap: 50px;
+  
+  .topics,
+  .infomation {
+    grid-column: 1 / -1;
+
+    .post-date {
+      margin: 10px 0 0;
+      font-size: 12px;
+      font-weight: normal;
+      color: var(--gray-color);
+      letter-spacing: .1em;
+    }
+  }
+  
+  .topics {
+    .post-text {
+      margin: 0 10px;
+    }
+    .post-title {
+      margin: 5px 0;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
+
+  .infomation {
+    & p {
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+  }
+
+  & h2, p {
+    color: var(--primary-deep-color);
+  }
+
+  & h2 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .post {
+    row-gap: 25px;
+  }
+
+  .post-item {
+    & img {
+      display: block;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
     }
   }
 }
