@@ -72,12 +72,14 @@ address {
 .post-sec /* section */ {
   display: flex;
   flex-direction: column;
-  padding: 50px 20px;
-  row-gap: 50px;
+  margin: 100px 0;
+  padding: 0 20px;
+  row-gap: 75px;
   
   .topics,
   .infomation {
     & h2 {
+      margin-bottom: 25px;
       font-weight: 700;
     }
     .post-date {
