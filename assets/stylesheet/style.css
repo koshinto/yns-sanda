@@ -45,27 +45,48 @@ address {
 
 .key-visual {
   width: 100vw;
+  margin: 75px 0;
+  padding: 25px 0;
   overflow-y: hidden;
-
+  
   & ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    
-    & li {
-      min-width: 100%;
-    }
+    flex-wrap: nowrap;
+  }
+
+  & li {
+    box-sizing: content-box;
+    padding: 0 25px;
+    min-width: 360px;
+  }
+
+  & a { display: block; }
   
-    & a {
-      display: block;
-    }
-  
-    & img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+  & img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .key-visual {
+    &li { min-width: 480px; }
+    & img { height: 420px; }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .key-visual {
+    & li { min-width: 960px; }
+    & img { height: 640px; }
   }
 }
 
