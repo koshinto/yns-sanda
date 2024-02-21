@@ -340,6 +340,74 @@ header {
   letter-spacing: .25em;
 }
 
+.catch-copy {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+  .catch-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .catch-text {
+    padding: 50px 0 0;
+    color: #000;
+    letter-spacing: .2em;
+    flex-direction: column;
+  }
+
+  .catch-headding {
+    font-size: 24px;      
+
+    & strong,
+    .catch-decoration {
+      font-size: 42px;
+      font-weight: 700;
+    }
+  }
+
+  .catch-message {
+    padding: 10px 20px;
+    line-height: 2;
+  }
+  
+  .catch-decoration {
+    /* background-color: #008cff; */
+    background: linear-gradient(180deg, #98d1ff, #008cff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .catch-image {
+    width: 320px;
+    height: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .catch-copy {
+    flex-direction: row;
+    padding: 30px 0 50px;
+
+    .catch-image {
+      width: 384px;
+      height: 384px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .catch-copy {
+    .catch-headding {
+      font-size: 32px;
+      & strong,
+      .catch-decoration {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
 .map iframe {
   width: 100%;
 }

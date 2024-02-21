@@ -1,11 +1,21 @@
 <?php get_header(); ?>
 <main class="home-page">
+  <section class="catch-copy">
+    <div class="catch-text catch-item">
+      <p class="catch-headding"><strong>宅配</strong>で<strong>街</strong>を<span class="catch-decoration">笑顔</span>に！</p>
+      <p class="catch-message">私たちのミッションは宅配を通し、<br>お客様に寄り添うパートナーになることです</p>
+    </div>
+    <div class="catch-item">
+      <img class="catch-image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/staff.webp" alt="スタッフのイメージ" srcset="">
+    </div>
+  </section>
+  
   <?php
     $args = array( 'category_name' => 'key-visual' );
     $key_visual_posts = get_posts( $args );
     if ( $key_visual_posts ):
   ?>
-  <div class="key-visual">
+  <section class="key-visual">
     <ul>
   <?php
       foreach ( $key_visual_posts as $post ):
@@ -14,7 +24,7 @@
     <li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'key-visual' ); ?></a></li>
   <?php endforeach; ?>
     </ul>
-  </div>  <!-- key-visual -->
+  </section>  <!-- key-visual -->
   <?php endif; ?>
   
   <section class="post-sec">
