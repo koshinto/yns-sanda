@@ -6,6 +6,7 @@
   --primary-deep-color: #0f1f4b;
   --main-bg-color: #f8f9ff;
   --gray-color: #9cb1e3;
+  --pale-black: #333;
 }
 ::placeholder { color: #ccc; }
 .dark { display: none; }
@@ -27,6 +28,12 @@ body {
 .thumbnail { display: block; }
 @media screen and (max-width: 768px) {
   .sp-hidden { display: none !important; }
+}
+
+.brands h2 {
+  margin-bottom: 25px;
+  color: var(--pale-black);
+  text-align: center;
 }
 
 /* ----- フォント ----- */
@@ -110,6 +117,7 @@ address {
       color: var(--gray-color);
       letter-spacing: .1em;
     }
+    .post-title { letter-spacing: .15em; }
   }
   
   .topics {
@@ -156,7 +164,7 @@ address {
   }
   
   .post {
-    gap: 25px;
+    gap: 10px;
   }
   
   .post-item {
@@ -383,7 +391,7 @@ header {
   }
   .catch-text {
     padding: 50px 0 0;
-    color: #000;
+    color: #333;
     letter-spacing: .2em;
     flex-direction: column;
   }
@@ -436,6 +444,11 @@ header {
       }
     }
   }
+}
+
+.brands {
+  max-width: 728px;
+  margin: 0 auto;
 }
 
 .map iframe {
