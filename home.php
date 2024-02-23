@@ -76,40 +76,42 @@
   </section>
 
   <section class="brands">
-    <h2>取扱商品</h2>
-    <?php $brands_path = esc_url( get_template_directory_uri() ) . "/assets/images/brands/"; ?>
-    <ul class="brand">
-      <li><img
-            src="<?php echo $brands_path; ?>yomiuri.png"
-            alt="読売新聞"
-            srcset="<?php echo $brands_path; ?>yomiuri.png 1x,
-                    <?php echo $brands_path; ?>yomiuri@2x.png 2x"
-      ></li>
-      <li><img
-            src="<?php echo $brands_path; ?>nikkei.png"
-            alt="日本経済新聞"
-            srcset="<?php echo $brands_path; ?>nikkei.png 1x,
-                    <?php echo $brands_path; ?>nikkei@2x.png 2x"
-      ></li>
-      <li><img
-            src="<?php echo $brands_path; ?>hochi.png"
-            alt="報知新聞"
-            srcset="<?php echo $brands_path; ?>hochi.png 1x,
-                    <?php echo $brands_path; ?>hochi@2x.png 2x"
-      ></li>
-      <li><img
-            src="<?php echo $brands_path; ?>shirobara.png"
-            alt="白バラ牛乳"
-            srcset="<?php echo $brands_path; ?>shirobara.png 1x,
-                    <?php echo $brands_path; ?>shirobara@2x.png 2x"
-      ></li>
-      <li><img
-            src="<?php echo $brands_path; ?>morinaga.png"
-            alt="森永乳業"
-            srcset="<?php echo $brands_path; ?>morinaga.png 1x,
-                    <?php echo $brands_path; ?>morinaga@2x.png 2x"
-      ></li>
-    </ul>
+    <div class="brands-wrap">
+      <h2>取扱商品</h2>
+      <?php $brands_path = esc_url( get_template_directory_uri() ) . "/assets/images/brands/"; ?>
+      <ul class="brand">
+        <li><img
+              src="<?php echo $brands_path; ?>yomiuri.png"
+              alt="読売新聞"
+              srcset="<?php echo $brands_path; ?>yomiuri.png 1x,
+                      <?php echo $brands_path; ?>yomiuri@2x.png 2x"
+        ></li>
+        <li><img
+              src="<?php echo $brands_path; ?>nikkei.png"
+              alt="日本経済新聞"
+              srcset="<?php echo $brands_path; ?>nikkei.png 1x,
+                      <?php echo $brands_path; ?>nikkei@2x.png 2x"
+        ></li>
+        <li><img
+              src="<?php echo $brands_path; ?>hochi.png"
+              alt="報知新聞"
+              srcset="<?php echo $brands_path; ?>hochi.png 1x,
+                      <?php echo $brands_path; ?>hochi@2x.png 2x"
+        ></li>
+        <li><img
+              src="<?php echo $brands_path; ?>shirobara.png"
+              alt="白バラ牛乳"
+              srcset="<?php echo $brands_path; ?>shirobara.png 1x,
+                      <?php echo $brands_path; ?>shirobara@2x.png 2x"
+        ></li>
+        <li><img
+              src="<?php echo $brands_path; ?>morinaga.png"
+              alt="森永乳業"
+              srcset="<?php echo $brands_path; ?>morinaga.png 1x,
+                      <?php echo $brands_path; ?>morinaga@2x.png 2x"
+        ></li>
+      </ul>
+    </div>
   </section>
 
   <section class="offices">
