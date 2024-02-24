@@ -7,4 +7,8 @@
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 <?php endwhile; endif; ?>
 </ul>
-<?php get_footer(); ?>
+</main>
+<?php
+  dynamic_sidebar( 'bottom-widget-area' );
+  get_footer();
+?>

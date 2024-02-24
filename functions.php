@@ -26,13 +26,11 @@ function my_custom_scripts() {
 // ウィジェットの有効化
 function theme_widgets_init() {
   register_sidebar( array(
-    'name' => 'サイドバーウィジェットエリア',
-    'id' => 'primary-widget-area',
-    'description' => '固定ページのサイドバー',
-    'before_widget' => '<aside class="side-inner">',
+    'name' => 'ボトムウィジェットエリア',
+    'id' => 'bottom-widget-area',
+    'description' => '投稿ページ用の下部に表示する',
+    'before_widget' => '<aside class="bottom-widget">',
     'after_widget' => '</aside>',
-    'before_title' => '<h4 class="widget_title">',
-    'after_title' => '</h4>',
   ) );
 };
 add_action( 'widgets_init', 'theme_widgets_init' );

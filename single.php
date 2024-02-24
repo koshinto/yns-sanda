@@ -6,4 +6,8 @@
       endwhile; endif;
     ?>
   </div>
-<?php get_footer(); ?>
+</main>
+<?php
+  dynamic_sidebar( 'bottom-widget-area' );
+  get_footer();
+?>

@@ -4,4 +4,8 @@
   if ( have_posts() ): while ( have_posts() ): the_post();
     the_content();
   endwhile; endif; ?>
-<?php get_footer(); ?>
+</main>
+<?php
+  dynamic_sidebar( 'bottom-widget-area' );
+  get_footer();
+?>

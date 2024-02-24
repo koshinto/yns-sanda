@@ -1,4 +1,3 @@
-</main>
 <footer>
   <div class="footer-area">
     <div class="sitemaps">

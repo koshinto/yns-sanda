@@ -1,4 +1,4 @@
-@layer reset;
+@layer widgets, reset;
 @import url(./reset.css) layer(reset);
 
 :root {
@@ -620,4 +620,25 @@ footer {
     color: var(--gray-color);
     font-size: 11px;
   }
+}
+
+
+.bottom-widget {
+  max-width: 728px;
+  margin: 50px 20px;
+  & h2 {
+    color: var(--primary-deep-color);
+    font-size: 2em;
+  }
+}
+.widget h2 { margin-bottom: 25px; }
+.popular-posts {
+  .wpp-list {
+    display: none;
+    flex-direction: row;
+  }
+  .taxonomies { display: none; }
+}
+@media screen and (min-width: 768px) {
+  .bottom-widget { margin: 50px auto; }
 }
