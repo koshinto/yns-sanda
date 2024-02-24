@@ -10,6 +10,7 @@
     </div>
   </section>
   
+  <!-- キービジュアル -->
   <?php
     $args = array( 'category_name' => 'key-visual' );
     $key_visual_posts = get_posts( $args );
@@ -24,12 +25,21 @@
     <li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'key-visual' ); ?></a></li>
   <?php endforeach; ?>
     </ul>
-  </section>  <!-- key-visual -->
+  </section>
   <?php endif; ?>
+
+  <!-- ユーザーアクション -->
+  <section id="user-action">
+    <?php wp_nav_menu( array(
+      'theme_location' => 'place_user_action',
+      'container' => false
+      ) );
+    ?>
+  </section>
   
+  <!-- トピックスと新着の投稿 -->
   <section class="post-sec">
   <?php 
-  // 新着の投稿を表示
   $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'blog' ) );
   if ( $the_query->have_posts() ): 
   ?>
@@ -53,7 +63,7 @@
     </div>
   <?php
     endif;
-    // 新着のお知らせを表示
+    // 新着のお知らせ
     $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'infomation' ) );
     if ( $the_query->have_posts() ): 
   ?>
