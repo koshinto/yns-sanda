@@ -12,7 +12,8 @@ register_nav_menus( array(
   'place_global' => 'グローバル',
   'place_sub_global' => 'サブメニュー',
   'place_footer_company' => 'フッター企業情報',
-  'place_footer_service' => 'フッターサービス情報'
+  'place_footer_service' => 'フッターサービス情報',
+  'place_user_action' => 'ユーザーアクション'
 ) );
 
 // JavaScript読み込み
@@ -21,3 +22,17 @@ function my_custom_scripts() {
   wp_enqueue_script( 'slider-script', get_template_directory_uri() . '/assets/js/slider.js' );
   // wp_enqueue_script( 'menu-script', get_template_directory_uri() . '/assets/js/menu.js' );
 }
+
+// ウィジェットの有効化
+function theme_widgets_init() {
+  register_sidebar( array(
+    'name' => 'サイドバーウィジェットエリア',
+    'id' => 'primary-widget-area',
+    'description' => '固定ページのサイドバー',
+    'before_widget' => '<aside class="side-inner">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h4 class="widget_title">',
+    'after_title' => '</h4>',
+  ) );
+};
+add_action( 'widgets_init', 'theme_widgets_init' );
