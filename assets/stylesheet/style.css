@@ -612,4 +612,12 @@ footer {
       padding-left: 15px;
     }
   }
+
+  .support-browser {
+    grid-column: 1 / -1;
+    align-items: center;
+    margin: 25px 0 5px;
+    color: var(--gray-color);
+    font-size: 11px;
+  }
 }

@@ -27,6 +27,12 @@
     </section>
     
     <p class="copyright"><small>&copy; <span class="year"><?php echo date('Y'); ?></span> YNS-Sanda Co., Ltd.</small></p>
+    <p class="support-browser">
+      動作環境<br>
+      対応OS:Windows 10以降, macOS 12以降<br>
+      対応ブラウザ: Google Chrome117以降, Microsoft Edge117以降, Safari16以降, Mozilla FireFox71以降<br>
+      ※Internet Explorerは動作対象外です。
+    </p>
   </div>
 </footer>
 <?php wp_footer(); ?>
