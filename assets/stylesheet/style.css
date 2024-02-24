@@ -36,6 +36,16 @@ body {
   text-align: center;
 }
 
+.bread-crumb {
+  max-width: 728px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  font-size: 12px;
+}
+
 /* ----- フォント ----- */
 h1 { font-size: 3em; }
 h2 { font-size: 2em; }
@@ -357,18 +367,57 @@ header {
   width: 200px;
 }
 
-#page-title-space {
-  height: 50px;
+#page-title {
   background-color: rgb(245, 247, 255);
 }
-#page-title-space h1 {
+#page-title h1 {
   margin: 0;
-  line-height: 50px;
+  padding: 35px 0 50px;
   color: var(--primary-color);
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: 700;
   text-align: center;
-  letter-spacing: .25em;
+  letter-spacing: .025em;
+}
+
+/* ページコンテンツ */
+#page {
+  color: var(--pale-black);
+  background-color: #fff;
+}
+.page-content {
+  max-width: 728px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  & p {
+    margin: 25px 0;
+    line-height: 2;
+  }
+  & h1, h2, h3 ,h4, h5, h6 {
+    margin: 50px 0;
+    line-height: 1.5;
+  }
+  & h1, h2 {
+    font-size: 48px;
+  }
+  & h3, h4 {
+    font-size: 32px;
+  }
+  & blockquote, .wp-block-quote {
+    margin: 50px 0;
+    padding: 25px;
+    background-color: #eee;
+    border-radius: 15px;
+    & p {
+      margin: 0 0 15px;
+    }
+    & cite {
+      display: block;
+      font-size: 13px;
+      color: #808080;
+      text-align: right;
+    }
+  }
 }
 
 .catch-copy {

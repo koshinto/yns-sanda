@@ -52,20 +52,21 @@
       </div>
     </section>
   </div>
+  
+  <?php if( !is_home() && function_exists( 'bcn_display' ) ): ?>
+    <!-- パンくずリスト -->
+    <nav class="bread-crumb">
+        <?php bcn_display(); ?>
+    </nav>
+  <?php endif; ?>
 
   <?php if( !is_home() ): // ページタイトルを表示するページ ?>
-  <div id="page-title-space">
+  <div id="page-title">
     <?php if( is_single() || is_page() ): // ページタイトルを表示 ?>
     <h1><?php echo get_the_title(); ?></h1>
   <?php elseif( is_404() ): // 404ページ ?>
     <h1>お探しのページは見つかりませんでした</h1>
   <?php endif; ?>
   </div>
-  <?php endif; ?>
-
-  <?php if( !is_home() && function_exists( 'bcn_display' ) ): // パンくずリストの表示 ?>
-    <nav class="bread-crumb">
-        <?php bcn_display(); ?>
-    </nav>
   <?php endif; ?>
 </header>
