@@ -637,13 +637,21 @@ footer {
   }
 }
 
-
+/* ウィジェット */
 .bottom-widget {
   max-width: 728px;
   margin: 50px 20px;
   & h2 {
     color: var(--primary-deep-color);
     font-size: 2em;
+  }
+  .wp-block-page-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .wp-block-pages-list__item a {
+    display: block;
+    padding: 5px 0;
   }
 }
 .widget h2 { margin-bottom: 25px; }
@@ -655,5 +663,8 @@ footer {
   .taxonomies { display: none; }
 }
 @media screen and (min-width: 768px) {
-  .bottom-widget { margin: 50px auto; }
+  .bottom-widget {
+    margin: 50px auto;
+    & a:hover { text-decoration: 1px solid var(--pale-black); }
+  }
 }
