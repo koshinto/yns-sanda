@@ -397,12 +397,27 @@ header {
     margin: 50px 0;
     line-height: 1.5;
   }
-  & h1, h2 {
+  & h1, h2, h3, h4 {
     font-size: 48px;
+    padding: 10px;
   }
   & h3, h4 {
     font-size: 32px;
+    padding: 5px;
   }
+  & h5, h6 {
+    font-size: 24px;
+    padding: 5px;
+  }
+  & h1 {
+    color: #fff;
+    background-color: #333;
+  }
+  & h2, h3 { border-bottom: 1px solid #333; }
+  & h5 { border-bottom: 1px solid #333; }
+  > ul, > ol { margin: 25px 0; }
+  & li { padding: 5px 0; }
+
   & blockquote, .wp-block-quote {
     margin: 50px 0;
     padding: 25px;
@@ -418,13 +433,17 @@ header {
       text-align: right;
     }
   }
+  & iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .catch-copy {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-
   .catch-item {
     width: 100%;
     display: flex;
@@ -437,22 +456,18 @@ header {
     letter-spacing: .2em;
     flex-direction: column;
   }
-
   .catch-headding {
     font-size: 24px;      
-
     & strong,
     .catch-decoration {
       font-size: 42px;
       font-weight: 700;
     }
   }
-
   .catch-message {
     padding: 10px 20px;
     line-height: 2;
   }
-  
   .catch-decoration {
     /* background-color: #008cff; */
     background: linear-gradient(180deg, #98d1ff, #008cff);
