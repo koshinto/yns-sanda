@@ -541,11 +541,15 @@ header {
     font-weight: 700;
     border-radius: 15px;
   }
-}
-@media screen and (min-width: 768px) {
-  #user-action {
+  @media screen and (min-width: 768px) {
     .menu {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-item a::after {
+      transition-duration: 500ms;
+    }
+    .menu-item:hover a::after {
+      transform: translateX(5px);
     }
   }
 }
