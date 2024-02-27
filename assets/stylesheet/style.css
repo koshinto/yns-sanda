@@ -30,6 +30,14 @@ body {
   .sp-hidden { display: none !important; }
 }
 
+.number {
+  font-family: "Inter", sans-serif;
+}
+.phone-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
 .brands h2 {
   margin-bottom: 25px;
   color: var(--pale-black);
@@ -438,6 +446,16 @@ header {
     aspect-ratio: 16 / 9;
     width: 100%;
     height: auto;
+  }
+  .info {
+    & h2, h3, h4, h5, h6 {
+      margin: 25px 0;
+      font-size: 1.5rem;
+    }
+    & p {
+      margin: 0;
+      text-align: center;
+    }
   }
 }
 @media screen and (max-width: 767px) {
