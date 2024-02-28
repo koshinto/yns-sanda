@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="page" class="office-page">
+<main id="page">
   <div class="page-content">
     <h3>新聞を無料でお試ししませんか？</h3>
     <p>７日間無料で新聞をお試しいただけます。無理に勧誘することはありませんのでご安心ください。

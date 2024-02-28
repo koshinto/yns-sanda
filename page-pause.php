@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="page" class="office-page">
+<main id="page">
   <div class="page-content">
     <h3>配達の停止のお申し込み</h3>
     <p>
