@@ -38,6 +38,23 @@ body {
   font-weight: bold;
 }
 
+.text-chip {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: .75rem;
+  font-weight: normal;
+  background-color: #eee;
+  border-radius: 5px;
+}
+.text-chip-normal {
+  color: #fff;
+  background-color: var(--primary-deep-color);
+}
+.text-chip-require {
+  color: #fff;
+  background-color: rgb(198, 3, 3);
+}
+
 .brands h2 {
   margin-bottom: 25px;
   color: var(--pale-black);
@@ -447,7 +464,66 @@ header {
     width: 100%;
     height: auto;
   }
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 50px 0;
+    :nth-child(1) { margin-top: 0; }
+    :nth-last-child(1) { margin-bottom: 0; }
+  }
+  & label {
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    & a {
+      color: #808080;
+      text-decoration: 1px solid var(--pale-black);
+    }
+  }
+  & input:not([type="checkbox"], [type="submit"]),
+  select,
+  textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    background-color: #e9edf1;
+    border: 1px solid #acaeb1;
+    border-radius: 5px;
+  }
+  & input[type="date"] {
+    font-family: "Inter", sans-serif;
+  }
+  & input[type="submit"] {
+    width: 100%;
+    max-width: 385px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.25rem;
+    letter-spacing: .5em;
+    background-color: #0f1f4b;
+  }
+  .form-full-width {
+    margin: 50px 0;
+    text-align: center;
+  }
+  .form-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    text-align: center;
+    & input[type="checkbox"] {
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+    }
+    & label { margin: 0; }
+  }
   .info {
+    margin: 100px 0;
     & h2, h3, h4, h5, h6 {
       margin: 25px 0;
       font-size: 1.5rem;
@@ -457,14 +533,18 @@ header {
       text-align: center;
     }
   }
-}
-@media screen and (max-width: 767px) {
-  .page-content {
+  @media screen and (max-width: 767px) {
     & h1, h2 {
       font-size: 32px;
     }
     & h3, h4 {
       font-size: 24px;
+    }
+    & .form-label {
+      margin-bottom: 10px;
+    }
+    & .form-input {
+      margin-bottom: 20px;
     }
   }
 }

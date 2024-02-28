@@ -48,33 +48,34 @@
           </select>
         </dd>
       </dl>
+      <hr>
       <dl class="form-group">
         <dt class="form-label">
-          <label for="c-name">氏名</label>
+          <label for="c-name">氏名<span class="text-chip text-chip-require">必須</span></label>
         </dt>
         <dd class="form-input">
           <input id="c-name" name="c-name" type="text">
         </dd>
         <dt class="form-label">
-          <label for="c-email">メールアドレス</label>
+          <label for="c-email">メールアドレス<span class="text-chip text-chip-require">必須</span></label>
         </dt>
         <dd class="form-input">
           <input type="email" name="c-email" id="c-email">
         </dd>
         <dt class="form-label">
-          <label for="c-address">ご住所</label>
+          <label for="c-address">ご住所<span class="text-chip text-chip-require">必須</span></label>
         </dt>
         <dd class="form-input">
           <input type="text" name="c-address" id="c-address">
         </dd>
         <dt class="form-label">
-          <label for="from">配達開始日</label>
+          <label for="from">配達開始日<span class="text-chip text-chip-require">必須</span></label>
         </dt>
         <dd class="form-input">
           <input type="date" name="from" id="from">
         </dd>
         <dt class="form-label">
-          <label for="payment">お支払い</label>
+          <label for="payment">お支払い<span class="text-chip text-chip-normal">購読の方のみ</span></label>
         </dt>
         <dd class="form-input">
           <select name="payment" id="payment">
@@ -84,8 +85,14 @@
             <option value="cvs">コンビニ</option>
           </select>
         </dd>
+        <dt class="form-label">
+          <label for="other">お問い合わせ</label>
+        </dt>
+        <dd>
+          <textarea name="other" id="other" rows="5" placeholder="不明な点がございましたら、入力ください"></textarea>
+        </dd>
       </dl>
-      <div class="form-full-width">
+      <div class="form-agreement">
         <input type="checkbox" name="confirm" id="form-confirm"><label for="form-confirm"><a href="">プライバシーポリシー</a>に同意します</label>
       </div>
       <div class="form-full-width">
