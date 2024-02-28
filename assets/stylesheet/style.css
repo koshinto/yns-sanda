@@ -414,6 +414,8 @@ header {
   max-width: 728px;
   margin: 0 auto;
   padding: 50px 20px;
+  :nth-child(1) { margin-top: 0; }
+  :nth-last-child(1) { margin-bottom: 0; }
   & p {
     margin: 25px 0;
     line-height: 2;
