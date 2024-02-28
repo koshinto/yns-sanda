@@ -35,6 +35,7 @@
         </dt>
         <dd class="form-input">
           <input type="email" name="c-email" id="c-email">
+          <p>※Gmailには送信できません</p>
         </dd>
         <dt class="form-label">
           <label for="from-date">配達停止の開始日<span class="text-chip text-chip-require">必須</span></label>
