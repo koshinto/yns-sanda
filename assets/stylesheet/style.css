@@ -161,7 +161,7 @@ address {
     .post-item:hover {
       & img {
         transform: translateY(-10px);
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
       }
     }
     .post-text { margin: 0 10px; }
