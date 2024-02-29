@@ -211,6 +211,9 @@ address {
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .post-sec { row-gap: 100px; }
+}
 
 
 /* ----- メニュー ----- */
@@ -667,6 +670,46 @@ header {
   & img {
     display: block;
     max-width: 150px;
+  }
+}
+
+.sustainability {
+  margin: 100px 0;
+  .sust-message {
+    color: #333;
+    padding: 25px 0;
+    min-height: 500px;
+    & h2, h3, p {
+      margin: 25px 0;
+      letter-spacing: .15em;
+      & span {
+        display: inline-block;
+        padding: 5px 15px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+    }
+    & h2 {
+      color: rgb(55, 159, 55);
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+    & p {
+      line-height: 2;
+      font-size: 0.9rem;
+    }
+  }
+  .sust-message-group {
+    margin: 25px;
+  }
+  @media screen and (min-width: 768px) {
+    .sust-message {
+      margin: 0 20px;
+      border-radius: 25px;
+      & h2, h3 { font-size: 3rem; }
+    }
+    .sust-message-group { margin: 35px; }
   }
 }
 

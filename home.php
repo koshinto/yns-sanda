@@ -126,18 +126,15 @@
   </section>
 
   <section class="sustainability">
-    <img class=""
-      src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/sustainability.jpeg"
-      alt=""
-    >
-    <div class="message-group">
-      <h2>ワイエヌエス三田の取り組み</h2>
-      <p>持続可能で豊かな生活を続ける為に事業活動と共に地球環境への影響を意識した活動を行います。</p>
-    </div>
-
-    <div class="message-group">
-      <h3>地球環境への取組みとして資源の回収を推進</h3>
-      <p>紙資源を事業主体とする弊社の責務として主に新聞・古本等の紙資源、アルミを積極的に回収を行い再利用に取り組みます。</p>
+    <div class="sust-message" style="background: no-repeat center / cover fixed url(<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/sustainability.jpeg)">
+      <div class="sust-message-group">
+        <h2><span>サステナビリティ</span></h2>
+        <p><span>
+          紙資源を活用する企業として、持続可能で豊かな生活を続ける為に
+          事業活動と共に地球環境への影響を意識した活動を行います
+        </span></p>
+        
+      </div>
     </div>
   </section>
 
