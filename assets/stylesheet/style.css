@@ -241,6 +241,7 @@ address {
 /* ----- ヘッダー ----- */
 /* グローバルナビグループ */
 header {
+  z-index: 100;
   a:hover { text-decoration: underline; }
 }
 #header-nav-wrap { border-bottom: #eee 1px solid; }
@@ -294,11 +295,36 @@ header {
   grid-column: 1 / 3;
   grid-row: 4 / 5;
 }
-#search-form input[type="text"] {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 10px;
-  border: #ccc 1px solid;
+.search-field {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #eee;
+}
+#search-form {
+  & input[type="text"] {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    :focus {
+      border: none;
+      display: none;
+    }
+  }
+  .submit-btn {
+    display: inline-block;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+  }
+  .submit-btn::before {
+    font-family: FontAwesome;
+    content: "\f002";
+    font-size: 1rem;
+  }
+
 }
 @media screen and (max-width: 1023px) {
   #header-nav a { margin-left: 12px; }
@@ -306,9 +332,12 @@ header {
   #sub-nav,
   #search-form {
     margin: 0;
-    padding: 30px;
-    font-size: 1.5em;
-    font-weight: 700;
+    padding: 20px 0;
+    font-size: 1em;
+  }
+  #search-form {
+    border-radius: 25%;
+    margin: 0 25px;
   }
   #global-nav a,
   #sub-nav a {
@@ -361,6 +390,10 @@ header {
 
     column-gap: 15px;
     font-size: .85em;
+  }
+  .search-field {
+    flex-direction: row;
+    justify-self: left;
   }
   #search-form {
     grid-column: 3 / 4;

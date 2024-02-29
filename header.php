@@ -34,8 +34,8 @@
             wp_nav_menu( array(
               'theme_location' => 'place_global',
               'container' => false
-              ) );
-              ?>
+            ) );
+          ?>
         </nav>
         <nav id="sub-nav">
           <?php
@@ -47,7 +47,10 @@
         </nav>
         <div id="search-form">
           <form action="<?php echo esc_url( home_url() ); ?>" method="get">
-            <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query(); ?>">
+            <div class="search-field">
+              <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query(); ?>">
+              <button type="submit" class="submit-btn"></button>
+            </div>
           </form>
         </div>
       </div>
