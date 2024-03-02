@@ -715,6 +715,7 @@ header {
 }
 
 .sustainability {
+  box-sizing: border-box;
   margin: 100px 0;
   .sust-message {
     color: #333;
@@ -743,6 +744,12 @@ header {
   }
   .sust-message-group {
     margin: 25px;
+  }
+  .sust-image {
+    object-fit: cover;
+    border-radius: 25px;
+    max-height: 450px;
+    width: 100%;
   }
   @media screen and (min-width: 768px) {
     .sust-message {

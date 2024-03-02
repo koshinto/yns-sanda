@@ -126,14 +126,17 @@
   </section>
 
   <section class="sustainability">
-    <div class="sust-message" style="background: no-repeat center / cover fixed url(<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/sustainability.jpeg)">
+    <div class="sust-message">
       <div class="sust-message-group">
         <h2><span>サステナビリティ</span></h2>
         <p><span>
           紙資源を活用する企業として、持続可能で豊かな生活を続ける為に
           事業活動と共に地球環境への影響を意識した活動を行います
         </span></p>
-        
+        <img class="sust-image"
+          src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/sustainability@1x.jpg)"
+          alt="サステナビリティ"
+          srcset="">
       </div>
     </div>
   </section>
