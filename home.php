@@ -133,10 +133,11 @@
           紙資源を活用する企業として、持続可能で豊かな生活を続ける為に
           事業活動と共に地球環境への影響を意識した活動を行います
         </span></p>
+        <?php $sust_image_uri = esc_url( get_template_directory_uri() ) . '/assets/images/'; ?>
         <img class="sust-image"
           src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/sustainability@1x.jpg)"
           alt="サステナビリティ"
-          srcset="">
+          srcset="<?php echo $sust_image_uri . 'sustainability@1x.jpg 1x, ' . $sust_image_uri . 'sustainability@2x.jpg 2x' ?> ">
       </div>
     </div>
   </section>
