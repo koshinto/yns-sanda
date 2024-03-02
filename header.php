@@ -20,42 +20,35 @@
 <body <?php body_class(); ?> >
 <?php wp_head(); ?>
 <header>
-  <div id="header-nav-wrap">
-    <section id="header-nav">
+  <section class="header">
+    <div class="header-nav-bar">
       <a id="header-logo" class="corplogo light" href="<?php echo esc_url( home_url() ); ?>"><img class="light logo-light" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/svg/logo-light.svg" alt="logo"></a>
-      <div id="menu-open-btn">
-        <div id="menu-open-btn-inner">
-          <span></span><span></span><span></span>
+      <div class="header-btns">
+        <div id="search-open-btn" class="header-btn search-open-btn"><p class="header-icon search-icon"></p></div>
+        <div id="menu-open-btn" class="header-btn menu-open-btn">
+          <p class="header-icon menu-icon"></p>
         </div>
       </div>
-      <div id="header-sub-group" class="sp-hidden">
-        <nav id="global-nav">
-          <?php
-            wp_nav_menu( array(
-              'theme_location' => 'place_global',
-              'container' => false
-            ) );
-          ?>
-        </nav>
-        <nav id="sub-nav">
-          <?php
-            wp_nav_menu( array(
-              'theme_location' => 'place_sub_global',
-              'container' => false
-            ) );
-          ?>
-        </nav>
-        <div id="search-form">
-          <form action="<?php echo esc_url( home_url() ); ?>" method="get">
-            <div class="search-field">
-              <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query(); ?>">
-              <button type="submit" class="submit-btn"></button>
-            </div>
-          </form>
-        </div>
+    </div>
+    <div class="header-nav-group">
+      <nav id="global-nav">
+        <?php
+          wp_nav_menu( array(
+            'theme_location' => 'place_global',
+            'container' => false
+          ) );
+        ?>
+      </nav>
+      <div id="search-form" class="">
+        <form action="<?php echo esc_url( home_url() ); ?>" method="get">
+          <div class="search-field">
+            <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query(); ?>">
+            <button type="submit" class="submit-btn"></button>
+          </div>
+        </form>
       </div>
-    </section>
-  </div>
+    </div>  <!-- / header-nav-group -->
+  </section>
   
   <?php if( !is_home() && function_exists( 'bcn_display' ) ): ?>
     <!-- パンくずリスト -->
