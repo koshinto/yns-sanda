@@ -1,11 +1,19 @@
 <?php
 // アイキャッチ画像の有効化
 add_theme_support( 'post-thumbnails' );
+// カスタムロゴの有効化
+add_action( 'after_setup_theme', function() { add_theme_support( 'custom-logo' ); } );
 // キービジュアルの画像サイズ
 add_image_size( 'key-visual', 1024, 640, true );
 // 記事一覧の画像サイズ
 add_image_size( 'common', 520, 240, true );
 add_image_size( 'post', 320, 240, true );
+add_image_size( 'logo', 200, 50, true );
+
+// SVGファイルのサポート
+function custom_mime_types( $mimes ) {	$mimes['svg'] = 'image/svg+xml';	return $mimes;
+}
+add_filter( 'upload_mimes', 'custom_mime_types' );
 
 // カスタムメニュー
 register_nav_menus( array(
@@ -34,3 +42,16 @@ function theme_widgets_init() {
   ) );
 };
 add_action( 'widgets_init', 'theme_widgets_init' );
+
+// ホームへリンクするロゴを表示
+function custom_logo_script() {
+  $logo = $tag = null;
+  if ( has_custom_logo() ) {
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+    $tag = '<a id="header-logo" class="corplogo light" href="' . home_url() . '">'. '<img src="' . $logo[0] . '" alt="logo"></a>';
+  } else {
+    $tag = '<a id="header-logo" class="corplogo light" href="' . home_url() . '"><h1>' . get_bloginfo( 'name' ) . '</h1></a>';
+  }
+  echo $tag;
+};

@@ -243,8 +243,18 @@ address {
 header {
   background-color: #fff;
   z-index: 100;
-  a:hover { text-decoration: underline; }
-  .corplogo { width: 200px; }
+  .corplogo {
+    & img {
+      max-height: 54px;
+      object-fit: contain;
+    }
+    & h1 {
+      font-size: 32px;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: .01rem;
+    }
+  }
 }
 .header {
   display: grid;
@@ -405,10 +415,6 @@ header {
 
 .corplogo {
   text-align: center;
-}
-.corplogo h1 {
-  display: inline-block;
-  width: 200px;
 }
 
 #page-title {

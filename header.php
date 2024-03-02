@@ -22,7 +22,7 @@
 <header>
   <section class="header">
     <div class="header-nav-bar">
-      <a id="header-logo" class="corplogo light" href="<?php echo esc_url( home_url() ); ?>"><img class="light logo-light" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/svg/logo-light.svg" alt="logo"></a>
+      <?php custom_logo_script(); ?>
       <div class="header-btns">
         <div id="search-open-btn" class="header-btn search-open-btn"><p class="header-icon search-icon"></p></div>
         <div id="menu-open-btn" class="header-btn menu-open-btn">
