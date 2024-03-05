@@ -147,6 +147,8 @@ address {
     .post-title { letter-spacing: .15em; }
   }
   .topics {
+    max-width: 1024px;
+    margin: 0 auto;
     .post {
       display: grid;
       grid-template-columns: 1fr;
