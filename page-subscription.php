@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 <main id="page">
+  <?php
+    get_template_part( 'template-parts/breadcrumb' );
+    get_template_part( 'template-parts/pagetitle' );
+  ?>
+
   <div class="page-content">
     <h3>新聞を無料でお試ししませんか？</h3>
     <p>７日間無料で新聞をお試しいただけます。無理に勧誘することはありませんのでご安心ください。

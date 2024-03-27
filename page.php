@@ -1,6 +1,9 @@
 <?php get_header(); ?>
-<main class="page" class="common-page">
+<main id="page" class="common-page">
 <?php
+  get_template_part( 'template-parts/breadcrumb' );
+  get_template_part( 'template-parts/pagetitle' );
+  
   if ( have_posts() ): while ( have_posts() ): the_post();
     the_content();
   endwhile; endif; ?>

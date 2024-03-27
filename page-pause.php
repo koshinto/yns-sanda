@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 <main id="page">
+  <?php
+    get_template_part( 'template-parts/breadcrumb' );
+    get_template_part( 'template-parts/pagetitle' );
+  ?>
+
   <div class="page-content">
     <h3>配達の停止のお申し込み</h3>
     <p>

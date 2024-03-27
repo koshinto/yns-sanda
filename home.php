@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="home-page">
+<main id="page" class="home-page">
   <section class="catch-copy">
     <div class="catch-copy-inner">
       <h1 class="catch-head">新聞は信頼できる情報源で<strong><span>No１</span></strong></h1>

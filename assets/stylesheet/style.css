@@ -18,7 +18,6 @@ body {
   font-size: 16px; /* 基準サイズ */
   font-weight: 400;
   color: #333;
-  background-color: var(--main-bg-color);
   width: 100%;
   overflow-x: scroll;
 }
@@ -435,6 +434,7 @@ header {
   text-align: center;
 }
 
+#page { padding-top: 100px; }
 #page-title {
   background-color: rgb(245, 247, 255);
 }
