@@ -3,7 +3,7 @@ const btn = document.querySelector(".menu-btn-inner");
 const menus = document.getElementById("header-menus");
 
 const initializer = (() => {
-  btn.classList.remove("menu-bar-close");
+  btn.classList.add("menu-bar-close");
   menus.classList.remove("sp-menu-group-hidden")
   console.log(btn);
 })();

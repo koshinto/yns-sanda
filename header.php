@@ -20,12 +20,12 @@
 <?php wp_head(); ?>
 <header>
   <div class="site-description"><?php bloginfo( 'description'); ?></div>
-  <div class="header-inner">
+  <div class="header-inner sp-menu-open">
     <div class="header-logo">
       <?php custom_logo_script(); ?>
     </div>
       <div class="menu-btn pc-hidden">
-        <div class="menu-btn-inner menu-bar-close">
+        <div class="menu-btn-inner">
           <span class="menu-bar menu-bar-1"></span>
           <span class="menu-bar menu-bar-2"></span>
           <span class="menu-bar menu-bar-3"></span>
