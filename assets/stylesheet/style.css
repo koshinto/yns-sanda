@@ -14,7 +14,9 @@
 
 /* ----- 共通 ----- */
 body {
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: "BIZ UDGothic" sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 16px; /* 基準サイズ */
   font-weight: 400;
   color: #333;
@@ -333,9 +335,7 @@ header {
     }
     .header-logo {
       width: 100%;
-      & img {
-        width: 80%;
-      }
+      & img { max-width: 250px; }
     }
     .menu-group {
       grid-column: 1 / -1;
@@ -375,6 +375,7 @@ header {
       padding: 10px 0;
       height: 74px;
     }
+    .header-logo { max-width: 300px; }
     .menu-group {
       display: flex;
       width: 100%;
