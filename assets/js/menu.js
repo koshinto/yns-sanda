@@ -1,10 +1,17 @@
-const body = document.getElementsByTagName("body")[0];
-const btn = document.getElementById("menu-open-btn");
-const subGroup = document.getElementById("header-nav-group");
+const main = document.querySelector("main");
+const btn = document.querySelector(".menu-btn-inner");
+const menus = document.getElementById("header-menus");
+
+const initializer = (() => {
+  btn.classList.remove("menu-bar-close");
+  menus.classList.remove("sp-menu-group-hidden")
+  console.log(btn);
+})();
 
 btn.addEventListener("click", () => {
-  body.classList.toggle("scroll-y-lock");
-  subGroup.classList.toggle("sp-hidden");
+  main.classList.toggle("sp-scroll-y-lock");
+  btn.classList.toggle("menu-bar-close");
+  menus.classList.toggle("sp-menu-group-hidden");
 });
 
-console.log("loaded menu.js");
+console.log('loaded menu.js');

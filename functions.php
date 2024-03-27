@@ -17,8 +17,8 @@ add_filter( 'upload_mimes', 'custom_mime_types' );
 
 // カスタムメニュー
 register_nav_menus( array(
-  'place_global' => 'グローバル',
-  'place_sub_global' => 'サブメニュー',
+  'place_global' => 'グローバルメニュー',
+  'place_button_menu' => 'ヘッダーボタンメニュー',
   'place_footer_company' => 'フッター企業情報',
   'place_footer_service' => 'フッターサービス情報',
   'place_user_action' => 'ユーザーアクション'
@@ -55,3 +55,33 @@ function custom_logo_script() {
   }
   echo $tag;
 };
+
+function theme_customizer_extension($wp_customize) {
+  $wp_customize->add_section( 'corporate_message', array(
+    'title' => 'コーポレートメッセージ',
+    'property' => 201
+  ) );
+  $wp_customize->add_setting( 'catch-copy', array(
+    'default' => '',
+    'type' => 'option',
+    'transport' => 'postMessage',
+  ) );
+  $wp_customize->add_control( 'corp_msg', array(
+    'settings' => 'catch-copy',
+    'label' => 'トップページのキャッチコピー',
+    'section' => 'corporate_message',
+    'type' => 'text',
+  ) );
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'catch-copy',
+      array(
+        'label' => 'キャッチコピーの背景',
+        'section' => 'corporate_message',
+        'setting' => 'catch-copy-image',
+      )
+    )
+  );
+}
+add_action( 'customize_register', 'theme_customizer_extension' );

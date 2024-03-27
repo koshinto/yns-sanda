@@ -12,26 +12,27 @@
   <title><?php echo esc_html( wp_get_document_title() ); ?></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/stylesheet/style.css" type="text/css">
   <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/favicon.svg" type="image/x-icon">
 </head>
 <body <?php body_class(); ?> >
 <?php wp_head(); ?>
 <header>
-  <section class="header">
-    <div class="header-nav-bar">
+  <div class="site-description"><?php bloginfo( 'description'); ?></div>
+  <div class="header-inner">
+    <div class="header-logo">
       <?php custom_logo_script(); ?>
-      <div class="header-btns">
-        <div id="search-open-btn" class="header-btn search-open-btn"><p class="header-icon search-icon"></p></div>
-        <div id="menu-open-btn" class="header-btn menu-open-btn">
-          <p class="header-icon menu-icon"></p>
+    </div>
+      <div class="menu-btn pc-hidden">
+        <div class="menu-btn-inner menu-bar-close">
+          <span class="menu-bar menu-bar-1"></span>
+          <span class="menu-bar menu-bar-2"></span>
+          <span class="menu-bar menu-bar-3"></span>
         </div>
       </div>
-    </div>
-    <div class="header-nav-group">
-      <nav id="global-nav">
+    <div id="header-menus" class="menu-group sp-menu-group-hidden">
+      <nav id="header-global-nav" class="global-nav">
         <?php
           wp_nav_menu( array(
             'theme_location' => 'place_global',
@@ -39,16 +40,16 @@
           ) );
         ?>
       </nav>
-      <div id="search-form" class="">
-        <form action="<?php echo esc_url( home_url() ); ?>" method="get">
-          <div class="search-field">
-            <input type="text" name="s" class="search-input" placeholder="キーワードを入力" value="<?php the_search_query(); ?>">
-            <button type="submit" class="submit-btn"></button>
-          </div>
-        </form>
-      </div>
-    </div>  <!-- / header-nav-group -->
-  </section>
+      <nav id="header-button-menus" class="button-menus">
+        <?php
+          wp_nav_menu( array(
+            'theme_location' => 'place_button_menu',
+            'container' => false
+          ));
+        ?>
+      </nav>
+    </div>
+  </div>
   
   <?php if( !is_home() && function_exists( 'bcn_display' ) ): ?>
     <!-- パンくずリスト -->

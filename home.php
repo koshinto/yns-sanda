@@ -1,12 +1,9 @@
 <?php get_header(); ?>
 <main class="home-page">
   <section class="catch-copy">
-    <div class="catch-text catch-item">
-      <p class="catch-headding"><strong>宅配</strong>で<strong>街</strong>を<span class="catch-decoration">笑顔</span>に！</p>
-      <p class="catch-message">私たちのミッションは宅配を通し、<br>お客様に寄り添うパートナーになることです</p>
-    </div>
-    <div class="catch-item">
-      <img class="catch-image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/staff.webp" alt="スタッフのイメージ" srcset="">
+    <div class="catch-copy-inner">
+      <h1 class="catch-head">新聞は信頼できる情報源で<strong><span>No１</span></strong></h1>
+      <p class="catch-text"><small>令和３年度総務省・情報通信白書より</small></p>
     </div>
   </section>
   
