@@ -1,5 +1,6 @@
-@layer widgets, reset;
+@layer widgets, common, reset;
 @import url(./reset.css) layer(reset);
+@import url(./common.css) layer(common);
 
 :root {
   --primary-color: #1a306a;
@@ -12,38 +13,6 @@
 ::placeholder { color: #ccc; }
 .dark { display: none; }
 
-/* ----- 共通 ----- */
-body {
-  font-family: "BIZ UDGothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px; /* 基準サイズ */
-  font-weight: 400;
-  color: #333;
-  width: 100%;
-  overflow-x: scroll;
-}
-main::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .2);
-}
-
-.scroll-x-lock { overflow-x: hidden; }
-.scroll-y-lock { overflow-y: hidden; }
-.hidden { display: none !important; }
-.thumbnail { display: block; }
-@media screen and (max-width: 849px) {
-  .sp-hidden { display: none !important; }
-  .sp-scroll-x-lock { overflow-x: hidden; }
-  .sp-scroll-y-lock { overflow-y: hidden; }
-}
-@media screen and (min-width: 850px) {
-  .sp-scroll-x-lock { overflow-x: scroll; }
-  .sp-scroll-y-lock { overflow-y: scroll; }
-}
 
 .number {
   font-family: "Inter", sans-serif;
@@ -86,19 +55,6 @@ main::after {
   font-size: 12px;
 }
 
-/* ----- フォント ----- */
-h1 { font-size: 3em; }
-h2 { font-size: 2em; }
-h3, h4, h5, h6 { font-size: 1.5em; }
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-address {
-  font-style: normal;
-}
 
 .key-visual {
   width: 100vw;
