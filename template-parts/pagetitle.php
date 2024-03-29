@@ -2,6 +2,8 @@
 <div id="page-title">
   <?php if( is_single() || is_page() ): // ページタイトルを表示 ?>
   <h1><?php echo get_the_title(); ?></h1>
+<?php elseif( is_category() ): ?>
+  <h1><?php single_cat_title() ?></h1>
 <?php elseif( is_404() ): // 404ページ ?>
   <h1>お探しのページは見つかりませんでした</h1>
 <?php endif; ?>
