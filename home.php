@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 <main id="page" class="home-page">
-  <section class="catch-copy">
-    <div class="catch-copy-inner">
-      <h1 class="catch-head">新聞は信頼できる情報源で<strong><span>No１</span></strong></h1>
-      <p class="catch-text"><small>令和３年度総務省・情報通信白書より</small></p>
-    </div>
-  </section>
+  <div class="container">
+    <section class="catch-copy">
+      <div class="catch-copy-inner">
+        <h1 class="catch-head">新聞は信頼できる情報源で<strong><span>No１</span></strong></h1>
+        <p class="catch-text"><small>令和３年度総務省・情報通信白書より</small></p>
+      </div>
+    </section>
+  </div>
   
   <!-- キービジュアル -->
   <?php

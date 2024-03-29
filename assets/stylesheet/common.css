@@ -15,6 +15,13 @@ body {
 .hidden { display: none !important; }
 .thumbnail { display: block; }
 
+.container {
+  box-sizing: content-box;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 
 /* ----- フォント ----- */
 h1 { font-size: 3em; }
