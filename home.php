@@ -1,40 +1,30 @@
 <?php get_header(); ?>
 <main id="page" class="home-page">
-  <div class="container">
-    <section class="catch-copy">
-      <div class="catch-copy-inner">
-        <h1 class="catch-head">新聞は信頼できる情報源で<strong><span>No１</span></strong></h1>
-        <p class="catch-text"><small>令和３年度総務省・情報通信白書より</small></p>
-      </div>
-    </section>
-  </div>
-  
   <!-- キービジュアル -->
   <?php
     $args = array( 'category_name' => 'key-visual' );
     $key_visual_posts = get_posts( $args );
     if ( $key_visual_posts ):
   ?>
-  <section class="key-visual">
-    <ul>
-  <?php
-      foreach ( $key_visual_posts as $post ):
-        setup_postdata( $post );
-  ?>
-    <li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'key-visual' ); ?></a></li>
-  <?php endforeach; ?>
-    </ul>
+  <section id="key-visual">
+    <div class="key-container">
+      <ul class="key-card">
+        <?php
+            foreach ( $key_visual_posts as $post ):
+              setup_postdata( $post );
+        ?>
+          <li class="key-item">
+            <div class="key-image">
+              <?php the_post_thumbnail( 'full' ); ?>
+            </div>
+            <h2 class="key-text"><?php the_title(); ?></h2>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
   </section>
   <?php endif; ?>
 
-  <!-- ユーザーアクション -->
-  <section id="user-action">
-    <?php wp_nav_menu( array(
-      'theme_location' => 'place_user_action',
-      'container' => false
-      ) );
-    ?>
-  </section>
   
   <!-- トピックスと新着の投稿 -->
   <section class="post-sec">
