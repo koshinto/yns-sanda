@@ -21,7 +21,8 @@ register_nav_menus( array(
   'place_button_menu' => 'ヘッダーボタンメニュー',
   'place_footer_company' => 'フッター企業情報',
   'place_footer_service' => 'フッターサービス情報',
-  'place_user_action' => 'ユーザーアクション'
+  'place_personal' => 'パーソナルメニュー',
+  'place_business' => 'ビジネスメニュー'
 ) );
 
 // JavaScript読み込み
@@ -55,6 +56,28 @@ function custom_logo_script() {
   }
   echo $tag;
 };
+
+// タブメニューを生成
+function insert_tab_panel( $menus ) {
+  $html = '<div id="tab">';
+  $label = '<ul class="tab-label">';
+  $panel = '<ul class="tab-panel">';
+  $menu_length = count( $menus );
+  for ( $i = 0 ; $i < $menu_length ; $i ++ ) {
+    $menu_items = wp_get_nav_menu_items( $menus[$i], array() );
+    // ラベルを生成
+    $label .= '<li class="tab-label-item tab-label-item-' . $i + 1 . '" data-tab="' . $i + 1 .'">' .
+      $menus[$i] . '</li>';
+    $panel .= '<li class="tab-panel-item tab-panel-item-' . $i + 1 . '" data-panel="' . $i + 1 . '"><ul>';
+    // パネルを挿入
+    foreach ( $menu_items as $menu_item ) {
+      $panel .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+    }
+    $panel .= '</ul></li>';
+  }
+  $html .= $label . '</ul>' . $panel . '</ul></div>';
+  return $html;
+}
 
 function theme_customizer_extension($wp_customize) {
   $wp_customize->add_section( 'corporate_message', array(

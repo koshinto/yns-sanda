@@ -25,6 +25,12 @@
   </section>
   <?php endif; ?>
 
+  <!-- タブメニュー -->
+  <section id="tab-menu">
+    <div class="container">
+      <?php echo insert_tab_panel( array( 'パーソナルメニュー', 'ビジネスメニュー' ) ); ?>
+    </div>
+  </section>
   
   <!-- トピックスと新着の投稿 -->
   <section class="post-sec">
