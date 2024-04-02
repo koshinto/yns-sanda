@@ -72,7 +72,7 @@
         if ( $the_query->have_posts() ): 
       ?>
         <div class="topics">
-          <h2 class="headline">新着</h2>
+          <h2 class="headline">新しい記事</h2>
           <ul class="post">
           <?php
             while ( $the_query->have_posts() ): $the_query->the_post();
@@ -93,9 +93,9 @@
     </div>
   </section>
 
-  <section class="brands">
-    <div class="brands-wrap">
-      <h2 class="headline">取扱商品</h2>
+  <section id="brands" class="brands">
+    <div class="container">
+      <h2 class="headline">取扱銘柄</h2>
       <?php $brands_path = esc_url( get_template_directory_uri() ) . "/assets/images/brands/"; ?>
       <ul class="brand">
         <li><img
