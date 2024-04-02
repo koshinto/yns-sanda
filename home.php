@@ -132,19 +132,22 @@
     </div>
   </section>
 
-  <section class="sustainability">
-    <div class="sust-message">
-      <div class="sust-message-group">
-        <h2><span>サステナビリティ</span></h2>
-        <p><span>
-          紙資源を活用する企業として、持続可能で豊かな生活を続ける為に
-          事業活動と共に地球環境への影響を意識した活動を行います
-        </span></p>
-        <?php $sust_image_uri = esc_url( get_template_directory_uri() ) . '/assets/images/'; ?>
-        <img class="sust-image"
-          src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/sustainability@1x.jpg)"
-          alt="サステナビリティ"
-          srcset="<?php echo $sust_image_uri . 'sustainability@1x.jpg 1x, ' . $sust_image_uri . 'sustainability@2x.jpg 2x' ?> ">
+  <section id="sustainability">
+    <?php $image_uri = esc_url( get_template_directory_uri() ) . '/assets/images/'; ?>
+    <div class="container">
+      <h2 class="headline">紙資源を扱う企業としての取り組み</h2>
+      <div class="recycle-flow">
+        <div class="message-group">
+          <img src="<?php echo $image_uri ?>recyclecar.webp" alt="" class="recycle-image">
+          <p>お客様の新聞を回収</p>
+        </div>
+        <div class="message-group">
+          <img src="<?php echo $image_uri ?>factory.webp" alt="" class="recycle-image">
+          <p>提携業者が適切に処理</p>
+        </div><div class="message-group">
+          <img src="<?php echo $image_uri ?>kirakira.webp" alt="" class="recycle-image">
+          <p>新しい製品へ</p>
+        </div>
       </div>
     </div>
   </section>
