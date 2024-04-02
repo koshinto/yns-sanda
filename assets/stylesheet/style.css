@@ -525,8 +525,9 @@ header {
 
 #late-post {
   .headline {
-    padding-left: 15px;
+    padding: 0 0 7px 15px;
     color: #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
     letter-spacing: .15rem;
   }
   .post {
@@ -621,7 +622,7 @@ header {
   background-color: #fff;
 }
 .brands .headline {
-  color: #808080;
+  color: #c0c0c0;
   text-align: center;
   letter-spacing: .25rem;
 }
@@ -669,6 +670,7 @@ header {
     justify-content: center;
     gap: 50px;
     & p {
+      color: #379f37;
       margin-top: 10px;
       text-align: center;
     }
@@ -678,7 +680,7 @@ header {
 @media screen and (min-width: 600px) {
   #sustainability {
     .headline {
-      padding: 25px 0;
+      padding: 0 0 50px 0;
     }
     .sust-message {
       text-align: left;
