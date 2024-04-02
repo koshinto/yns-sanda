@@ -56,97 +56,6 @@
 }
 
 
-.post-sec /* section */ {
-  display: flex;
-  flex-direction: column;
-  margin: 100px 0;
-  padding: 0 20px;
-  row-gap: 75px;
-  .topics,
-  .infomation {
-    & h2 {
-      margin-bottom: 25px;
-      font-weight: 700;
-    }
-    .post-date {
-      margin: 10px 0 0;
-      font-size: 12px;
-      font-weight: normal;
-      color: var(--gray-color);
-      letter-spacing: .1em;
-    }
-    .post-title { letter-spacing: .15em; }
-  }
-  .topics {
-    max-width: 1024px;
-    margin: 0 auto;
-    .post {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    .post-item {
-      & img { 
-        height: auto;
-        aspect-ratio: 16/ 9;
-        transition-duration: 500ms;
-      }
-    }
-    .post-item:hover {
-      & img {
-        transform: translateY(-10px);
-        box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
-      }
-    }
-    .post-text { margin: 0 10px; }
-    .post-title {
-      margin: 5px 0;
-      font-size: 1em;
-      font-weight: bold;
-    }
-  }
-  .infomation p {
-    font-size: 1.25em;
-    font-weight: bold;
-  }
-  
-  & h2, p { color: var(--primary-deep-color); }
-  & h2 {
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  .post { gap: 10px; }
-  .post-item {
-    & img {
-      display: block;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-  }
-  .post-title:hover { text-decoration: underline; }
-  @media screen and (min-width: 768px) {
-    .topics {    
-      .post {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-      }  
-    }    
-    .infomation {
-      width: 520px;
-      margin: 0 auto;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    .topics {
-      .post {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-}
-@media screen and (min-width: 768px) {
-  .post-sec { row-gap: 100px; }
-}
 
 
 /* ----- メニュー ----- */
@@ -553,10 +462,131 @@ header {
 
 @media screen and (min-width: 850px) {
   #tab {
-    margin: 100px 0;
+    margin: 50px 0;
     .tab-panel-item ul {
       flex-direction: row;
     }
+  }
+}
+
+#notice .infomation,
+#late-post .topics {
+  padding: 50px 0;
+}
+#notice .headline,
+#late-post .headline {
+  padding-bottom: 25px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: .25rem;
+}
+
+#notice {
+  margin: 25px 0;
+  background-color: #f5f5f5;
+  .infomation {
+    padding: 50px 0;
+  }
+  .headline {
+    color: #696969;
+  }
+  .notice-title {
+    color: #696969;
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+  .notice-category,
+  .notice-date {
+    display: inline-block;
+    font-weight: 400;
+    color: #cfcfcf;
+  }
+  .notice-category {
+    padding: 2px 15px;
+    font-size: .75rem;
+    border-radius: 10px;
+    color: #696969;
+    background-color: #eee;
+  }
+  .notice-date {
+    font-size: .85rem;
+    letter-spacing: .05em;
+  }
+  .post {
+    padding: 30px 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    gap: 25px;
+  }
+  .post-item {
+    padding: 0 10px;
+  }
+}
+
+#late-post {
+  .post {
+    gap: 15px;
+  }
+  .post-item {
+    & img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+  .post-text {
+    font-family: sans-serif;
+    margin: 10px 5px 0;
+  }
+  .post-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .post-date {
+    color: #808080;
+    font-size: .8rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #late-post {
+    .post {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .post-item {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #notice .infomation,
+  #late-post .topics {
+    padding: 0 25px;
+  }
+  #notice {
+    margin: 50px 0;
+    .infomation { padding: 50px 25px; }
+    .post {
+      flex-direction: row;
+      flex: 1
+    }
+    .post-item { width: 100%; }
+  }
+  #late-post {
+    .post {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .post-item {
+      /* width: calc(100% / 2); */
+      flex-basis: 30%;
+      transition-duration: 200ms;
+    }
+    .post-item:hover .post-title { color: #1a306a; }
   }
 }
 

@@ -32,53 +32,65 @@
     </div>
   </section>
   
-  <!-- トピックスと新着の投稿 -->
-  <section class="post-sec">
-    <?php
-      // 新着のお知らせ
-      $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'infomation' ) );
-      if ( $the_query->have_posts() ): 
-    ?>
-    <div class="infomation">
-      <h2>お知らせ</h2>
-      <ul class="post">
-        <?php
-        while ( $the_query->have_posts() ): $the_query->the_post();
+  <!-- お知らせ -->
+  <section id="notice">
+    <div class="container">
+      <?php
+        $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'infomation,offers,release' ) );
+        if ( $the_query->have_posts() ): 
       ?>
-        <li class="post-item">
-          <a href="<?php the_permalink(); ?>">
-            <p class="post-date"><?php echo get_the_date(); ?></p>
-            <p class="post-title"><?php the_title(); ?></p>
-          </a>
-        </li>
-        <?php endwhile; ?>
-      </ul>
-    </div>
-    <?php
-      endif;
-      // トピックス
-      $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'blog' ) );
-      if ( $the_query->have_posts() ): 
-    ?>
-      <div class="topics">
-        <h2>トピックス</h2>
+      <div class="infomation">
+        <h2 class="headline">お知らせ</h2>
         <ul class="post">
-        <?php
+          <?php
           while ( $the_query->have_posts() ): $the_query->the_post();
         ?>
           <li class="post-item">
             <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail(); ?>
-              <div class="post-text">
-                <p class="post-date"><?php echo get_the_date(); ?></p>
-                <p class="post-title"><?php the_title(); ?></p>
-              </div>
+              <p class="notice-category">
+                <?php
+                  $categories = get_the_category();
+                  echo $categories[0]->name;
+                ?>
+              </p>
+              <p class="notice-date"><?php echo get_the_date(); ?></p>
+              <p class="notice-title"><?php the_title(); ?></p>
             </a>
           </li>
-        <?php endwhile; ?>
+          <?php endwhile; ?>
         </ul>
       </div>
-    <?php endif; ?>
+      <?php endif; ?>
+    </div>
+  </section>
+
+  <section id="late-post">
+    <div class="container">
+      <?php
+        // トピックス
+        $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'blog' ) );
+        if ( $the_query->have_posts() ): 
+      ?>
+        <div class="topics">
+          <h2 class="headline">新着</h2>
+          <ul class="post">
+          <?php
+            while ( $the_query->have_posts() ): $the_query->the_post();
+          ?>
+            <li class="post-item">
+              <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail(); ?>
+                <div class="post-text">
+                  <p class="post-date"><?php echo get_the_date(); ?></p>
+                  <p class="post-title"><?php the_title(); ?></p>
+                </div>
+              </a>
+            </li>
+          <?php endwhile; ?>
+          </ul>
+        </div>
+      <?php endif; ?>
+    </div>
   </section>
 
   <section class="brands">
