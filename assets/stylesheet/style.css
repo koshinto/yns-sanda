@@ -525,6 +525,8 @@ header {
 
 #late-post {
   .post {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 15px;
   }
   .post-item {
@@ -550,14 +552,7 @@ header {
 
 @media screen and (min-width: 600px) {
   #late-post {
-    .post {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .post-item {
-      width: 45%;
-    }
+    .post { grid-template-columns: repeat(2, auto); }
   }
 }
 
@@ -576,16 +571,8 @@ header {
     .post-item { width: 100%; }
   }
   #late-post {
-    .post {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-    .post-item {
-      /* width: calc(100% / 2); */
-      flex-basis: 30%;
-      transition-duration: 200ms;
-    }
+    .post { grid-template-columns: repeat(3, auto); }
+    .post-item { transition-duration: 200ms; }
     .post-item:hover .post-title { color: #1a306a; }
   }
 }
