@@ -480,7 +480,7 @@ header {
 #brands .headline {
   font-family: sans-serif;
   margin-bottom: 25px;
-  font-size: 2.25rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 #notice .post-item,
@@ -495,7 +495,6 @@ header {
     padding: 50px 0;
   }
   .headline {
-    margin-left: 10px;
     color: #979797;
   }
   .notice-title {
@@ -533,14 +532,13 @@ header {
 
 #late-post {
   .headline {
-    padding: 0 0 7px 15px;
     color: #c0c0c0;
-    border-bottom: 1px solid #c0c0c0;
     letter-spacing: .15rem;
   }
   .post {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 15px;
   }
   .post-item {
@@ -567,6 +565,14 @@ header {
 @media screen and (min-width: 600px) {
   #late-post {
     .post { grid-template-columns: repeat(2, auto); }
+  }
+  #notice .headline,
+  #late-post .headline,
+  #brands .headline {
+    font-family: sans-serif;
+    margin-bottom: 25px;
+    font-size: 4rem;
+    font-weight: 700;
   }
 }
 
@@ -631,15 +637,14 @@ header {
 }
 .brands .headline {
   color: #c0c0c0;
-  text-align: center;
   letter-spacing: .25rem;
 }
 .brand {
-  padding: 0 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 25px;
   & img {
     display: block;
     max-width: 150px;

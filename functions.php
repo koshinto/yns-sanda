@@ -7,7 +7,7 @@ add_action( 'after_setup_theme', function() { add_theme_support( 'custom-logo' )
 add_image_size( 'key-visual', 1024, 640, true );
 // 記事一覧の画像サイズ
 add_image_size( 'common', 520, 240, true );
-add_image_size( 'post', 320, 240, true );
+add_image_size( 'post', 640, 480, true );
 add_image_size( 'logo', 200, 50, true );
 
 // SVGファイルのサポート

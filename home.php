@@ -79,7 +79,7 @@
           ?>
             <li class="post-item">
               <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail( '' ); ?>
                 <div class="post-text">
                   <p class="post-date"><?php echo get_the_date(); ?></p>
                   <p class="post-title"><?php the_title(); ?></p>
