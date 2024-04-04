@@ -19,10 +19,11 @@ add_filter( 'upload_mimes', 'custom_mime_types' );
 register_nav_menus( array(
   'place_global' => 'グローバルメニュー',
   'place_button_menu' => 'ヘッダーボタンメニュー',
-  'place_footer_company' => 'フッター企業情報',
-  'place_footer_service' => 'フッターサービス情報',
+  'place_sitemap' => 'サイトマップ',
+  'place_social_service' => 'ソーシャルネットワーク',
   'place_personal' => 'パーソナルメニュー',
-  'place_business' => 'ビジネスメニュー'
+  'place_business' => 'ビジネスメニュー',
+  'place_legal' => '法規コンテンツ'
 ) );
 
 // JavaScript読み込み
@@ -33,16 +34,16 @@ function my_custom_scripts() {
 }
 
 // ウィジェットの有効化
-function theme_widgets_init() {
-  register_sidebar( array(
-    'name' => 'ボトムウィジェットエリア',
-    'id' => 'bottom-widget-area',
-    'description' => '投稿ページ用の下部に表示する',
-    'before_widget' => '<aside class="bottom-widget">',
-    'after_widget' => '</aside>',
-  ) );
-};
-add_action( 'widgets_init', 'theme_widgets_init' );
+// function theme_widgets_init() {
+//   register_sidebar( array(
+//     'name' => 'ボトムウィジェットエリア',
+//     'id' => 'bottom-widget-area',
+//     'description' => '投稿ページ用の下部に表示する',
+//     'before_widget' => '<aside class="bottom-widget">',
+//     'after_widget' => '</aside>',
+//   ) );
+// };
+// add_action( 'widgets_init', 'theme_widgets_init' );
 
 // ホームへリンクするロゴを表示
 function custom_logo_script() {
