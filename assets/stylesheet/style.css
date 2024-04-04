@@ -10,6 +10,7 @@
   --gray-color: #9cb1e3;
   --pale-black: #333;
   --paper-white: rgb(249, 251, 255);
+  font-family: sans-serif;
 }
 ::placeholder { color: #ccc; }
 .dark { display: none; }
@@ -756,7 +757,9 @@ header {
   .sns-icon a {
     color: #696969;
     font-size: 1.5rem;
+    transition-duration: 300ms;
   }
+  .sns-icon a:hover { color: #333; }
   .legal ul {
     margin: 0 12px;
     display: flex;
