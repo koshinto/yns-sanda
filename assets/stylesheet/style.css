@@ -726,12 +726,8 @@ header {
   .copyright {
     margin: 0 10px;
   }
-  .footer-info {
-    padding: 24px 10px;
-  }
-  .sitemap {
-    padding: 32px;
-  }
+  .footer-info { padding: 24px 10px; }
+  .sitemap { padding: 32px; }
   .sitemap .menu-item.menu-item-has-children > a { font-weight: bold; }
   .sitemap .menu,
   .sitemap .sub-menu {
@@ -789,17 +785,21 @@ header {
 }
 @media screen and (min-width: 850px){
   #footer {
-    .footer-info {
-      padding: 32px;
+    .footer-info { padding: 32px; }
+    .sitemap .menu {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 24px;
     }
-    .sitemap 
-    .sitemap .menu,
-    .sitemap .sub-menu {
-      gap: 8px;
+    .sitemap .menu:not(.menu-item-has-children) {
+      grid-column: 2 / 4;
     }
+    .sitemap .menu-item:has(.sub-menu) { margin: 0; }
     .sitemap .sub-menu {
       margin-top: 8px;
+      gap: 8px;
     }
+    .sitemap .menu-item a:hover { text-decoration: underline; }
     .modest-text {
       grid-column: 1 / -1;
       grid-row: 2 / 3;
