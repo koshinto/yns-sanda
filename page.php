@@ -1,12 +1,17 @@
 <?php get_header(); ?>
-<main id="page" class="common-page">
-<?php
-  get_template_part( 'template-parts/breadcrumb' );
-  get_template_part( 'template-parts/pagetitle' );
-  
+<main id="page" class="page common-page">
+  <div class="page-title">
+  <?php
+    get_template_part( 'template-parts/breadcrumb' );
+    get_template_part( 'template-parts/pagetitle' );
+  ?>
+  </div>
+  <div class="page-content">
+  <?php
   if ( have_posts() ): while ( have_posts() ): the_post();
     the_content();
   endwhile; endif; ?>
+  </div>
 </main>
 <?php
   dynamic_sidebar( 'bottom-widget-area' );
