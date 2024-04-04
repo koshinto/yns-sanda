@@ -41,18 +41,144 @@
   background-color: rgb(198, 3, 3);
 }
 
+.page-title {
+  padding: 50px 0;
+  background-color: hsl(0, 0%, 96%);
+}
+.page-title h1 {
+  color: #696969;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .025em;
+}
 .bread-crumb {
+  font-size: 12px;
+  padding-bottom: 24px;
+  color: #808080;
+}
+.bread-crumb-inner {
   max-width: 728px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 5px;
-  font-size: 12px;
+  gap: 10px;
 }
-
-
-
+.page-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  border-left: 1px solid #f5f5f5;
+  border-right: 1px solid #f5f5f5;
+  .post-item {
+    & img {
+      height: auto;
+    }
+  }
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 50px 0;
+    :nth-child(1) { margin-top: 0; }
+    :nth-last-child(1) { margin-bottom: 0; }
+  }
+  .form-input p {
+    margin: 0;
+  }
+  & label {
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    & a {
+      color: #808080;
+      text-decoration: 1px solid var(--pale-black);
+    }
+  }
+  & input:not([type="checkbox"], [type="submit"]),
+  select,
+  textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    background-color: #e9edf1;
+    border: 1px solid #acaeb1;
+    border-radius: 5px;
+  }
+  & input[type="date"] {
+    font-family: "Inter", sans-serif;
+  }
+  & input[type="submit"] {
+    width: 100%;
+    max-width: 385px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.25rem;
+    letter-spacing: .5em;
+    background-color: #0f1f4b;
+  }
+  .form-full-width {
+    margin: 50px 0;
+    text-align: center;
+  }
+  .form-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    text-align: center;
+    & input[type="checkbox"] {
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+    }
+    & label { margin: 0; }
+  }
+  .info {
+    margin: 100px 0;
+    & h2, h3, h4, h5, h6 {
+      margin: 25px 0;
+      font-size: 1.5rem;
+    }
+    & p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 849px) {
+  .page-content {
+    & h1, h2 {
+      font-size: 32px;
+    }
+    & h3, h4 {
+      font-size: 24px;
+    }
+    & .form-label {
+      margin-bottom: 10px;
+    }
+    & .form-input {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (min-width: 850px) {
+  .page-title { padding: 100px 0 50px; }
+  .page-content {
+    .form-group {
+      grid-template-columns: 200px 1fr;
+      row-gap: 35px;
+    }
+    .form-label {
+      display: inline;
+      align-items: center;
+      justify-content: center !important;
+    }
+  }
+}
 
 /* ----- メニュー ----- */
 /* リストのインデント消去 */
@@ -256,179 +382,6 @@ header {
   text-align: center;
 }
 
-#page { padding-top: 100px; }
-#page-title {
-  background-color: rgb(245, 247, 255);
-}
-#page-title h1 {
-  margin: 0;
-  padding: 35px 0 50px;
-  color: var(--primary-color);
-  font-size: 2em;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: .025em;
-}
-
-/* ページコンテンツ */
-#page {
-  color: var(--pale-black);
-  background-color: #fff;
-}
-.page-content {
-  max-width: 728px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  :nth-child(1) { margin-top: 0; }
-  :nth-last-child(1) { margin-bottom: 0; }
-  & p {
-    margin: 25px 0;
-    line-height: 2;
-  }
-  & h1, h2, h3 ,h4, h5, h6 {
-    margin: 50px 0;
-    line-height: 1.5;
-    font-weight: 700;
-  }
-  & h1, h2, h3, h4 {
-    font-size: 48px;
-    padding: 10px;
-  }
-  & h3, h4 {
-    font-size: 32px;
-    padding: 5px;
-  }
-  & h5, h6 {
-    font-size: 24px;
-    padding: 5px;
-  }
-  & h1 {
-    color: #fff;
-    background-color: #333;
-  }
-  & h2, h3 { border-bottom: 1px solid #333; }
-  & h5 { border-bottom: 1px solid #333; }
-  > ul, > ol { margin: 25px 0; }
-  & li { padding: 5px 0; }
-
-  & blockquote, .wp-block-quote {
-    margin: 50px 0;
-    padding: 25px;
-    background-color: #eee;
-    border-radius: 15px;
-    & p {
-      margin: 0 0 15px;
-    }
-    & cite {
-      display: block;
-      font-size: 13px;
-      color: #808080;
-      text-align: right;
-    }
-  }
-  & iframe {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    height: auto;
-  }
-  .form-group {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 50px 0;
-    :nth-child(1) { margin-top: 0; }
-    :nth-last-child(1) { margin-bottom: 0; }
-  }
-  .form-input p {
-    margin: 0;
-  }
-  & label {
-    font-weight: bold;
-    user-select: none;
-    -webkit-user-select: none;
-    & a {
-      color: #808080;
-      text-decoration: 1px solid var(--pale-black);
-    }
-  }
-  & input:not([type="checkbox"], [type="submit"]),
-  select,
-  textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px 15px;
-    font-size: 1.25rem;
-    background-color: #e9edf1;
-    border: 1px solid #acaeb1;
-    border-radius: 5px;
-  }
-  & input[type="date"] {
-    font-family: "Inter", sans-serif;
-  }
-  & input[type="submit"] {
-    width: 100%;
-    max-width: 385px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1.25rem;
-    letter-spacing: .5em;
-    background-color: #0f1f4b;
-  }
-  .form-full-width {
-    margin: 50px 0;
-    text-align: center;
-  }
-  .form-agreement {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
-    text-align: center;
-    & input[type="checkbox"] {
-      width: 25px;
-      height: 25px;
-      margin-right: 15px;
-    }
-    & label { margin: 0; }
-  }
-  .info {
-    margin: 100px 0;
-    & h2, h3, h4, h5, h6 {
-      margin: 25px 0;
-      font-size: 1.5rem;
-    }
-    & p {
-      margin: 0;
-      text-align: center;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    & h1, h2 {
-      font-size: 32px;
-    }
-    & h3, h4 {
-      font-size: 24px;
-    }
-    & .form-label {
-      margin-bottom: 10px;
-    }
-    & .form-input {
-      margin-bottom: 20px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    .form-group {
-      grid-template-columns: 200px 1fr;
-      row-gap: 35px;
-    }
-    .form-label {
-      display: inline;
-      align-items: center;
-      justify-content: center !important;
-    }
-  }
-}
 
 
 #tab {
@@ -532,7 +485,8 @@ header {
   }
 }
 
-#late-post {
+#late-post,
+.page-content {
   .headline {
     color: #c0c0c0;
     letter-spacing: .15rem;

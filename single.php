@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="page">
+<main id="page" class="page">
   <?php
     get_template_part( 'template-parts/breadcrumb' );
     get_template_part( 'template-parts/pagetitle' );
