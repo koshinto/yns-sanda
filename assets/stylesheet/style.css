@@ -539,21 +539,21 @@ header {
   }
 }
 
-#notice .infomation,
-#late-post .topics {
-  padding: 50px 0;
+.headline-en {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  color: #929292;
+  letter-spacing: .02rem;
 }
-#notice .headline,
-#late-post .headline,
-#brands .headline {
-  font-family: sans-serif;
+.headline-en-blue {
+  color: #0f1f4b;
+}
+.headline {
+  color: #696969;
   margin-bottom: 25px;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-}
-#notice .post-item,
-#late-post .post-item {
-  font-family: sans-serif;
 }
 
 #notice {
@@ -561,9 +561,6 @@ header {
   background-color: #f5f5f5;
   .infomation {
     padding: 50px 0;
-  }
-  .headline {
-    color: #979797;
   }
   .notice-title {
     color: #696969;
@@ -598,30 +595,18 @@ header {
   }
 }
 
-#late-post,
-.page-content {
-  .headline {
-    color: #c0c0c0;
-    letter-spacing: .15rem;
-  }
-}
-
 @media screen and (min-width: 600px) {
   #notice .headline,
   #late-post .headline,
   #brands .headline {
     font-family: sans-serif;
     margin-bottom: 25px;
-    font-size: 4rem;
     font-weight: 700;
   }
 }
 
 @media screen and (min-width: 850px) {
   #notice .infomation,
-  #late-post .topics {
-    padding: 0 25px;
-  }
   #notice {
     margin: 50px 0;
     .infomation { padding: 50px 25px; }
@@ -672,7 +657,6 @@ header {
   background-color: #fff;
 }
 .brands .headline {
-  color: #c0c0c0;
   letter-spacing: .25rem;
 }
 .brand {

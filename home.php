@@ -40,6 +40,7 @@
         if ( $the_query->have_posts() ): 
       ?>
       <div class="infomation">
+        <p class="headline-en">Infomation</p>
         <h2 class="headline">お知らせ</h2>
         <ul class="post">
           <?php
@@ -71,7 +72,7 @@
         $the_query = new WP_Query( array( 'post_type' => 'post', 'category_name' => 'blog' ) );
         if ( $the_query->have_posts() ): 
       ?>
-        <div class="topics">
+          <p class="headline-en">The New Contents</p>
           <h2 class="headline">新しい記事</h2>
           <ul class="post">
           <?php
@@ -88,13 +89,13 @@
             </li>
           <?php endwhile; ?>
           </ul>
-        </div>
       <?php endif; ?>
     </div>
   </section>
 
   <section id="brands" class="brands">
     <div class="container">
+      <p class="headline-en headline-en-blue">The Brands</p>
       <h2 class="headline">取扱銘柄</h2>
       <?php $brands_path = esc_url( get_template_directory_uri() ) . "/assets/images/brands/"; ?>
       <ul class="brand">
