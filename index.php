@@ -1,18 +1,22 @@
 <?php get_header(); ?>
-<main id="page">
-  <?php
-    if ( is_single() || is_category() ) {
+<main id="page" class="page page-index">
+  <div class="page-title">
+    <?php
       get_template_part( 'template-parts/breadcrumb' );
-    }
       get_template_part( 'template-parts/pagetitle' );
-    if ( have_posts() ):
-  ?>
-    <ul>
-    <?php while ( have_posts() ): the_post(); ?>
-      <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-    <?php endwhile; ?>
-    </ul>
-  <?php endif; ?>
+    ?>
+  </div>
+  <div class="page-content">
+    <div class="page-content-margin">
+      <div class="page-content-body">
+        <?php
+          if ( have_posts() ): while ( have_posts() ): the_post(); 
+            the_content();
+          endwhile; endif;
+        ?>
+      </div>
+    </div>
+    </div>
 </main>
 <?php
   dynamic_sidebar( 'bottom-widget-area' );

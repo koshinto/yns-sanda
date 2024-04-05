@@ -65,17 +65,55 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-.page-content {
+.page-content-margin {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 50px 20px;
-  border-left: 1px solid #f5f5f5;
-  border-right: 1px solid #f5f5f5;
+  background-color: #fff;
+}
+.page-content-body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px 0;
+  color: #696969;
+  letter-spacing: .05rem;
   .post-item {
     & img {
       height: auto;
     }
   }
+  & h1 {
+    font-size: 2rem;
+    margin: 2rem 0;
+    line-height: 1.5;
+    vertical-align: baseline;
+  }
+  & h1::before {
+    display: inline-block;
+    content: '';
+    width: 4px;
+    height: 32px;
+    margin-right: 16px;
+    background-color: #808080;
+  }
+  & h2, & h3, & h4, & h5, & h6 {
+    margin: 2rem 0;
+    line-height: 1.5;
+  }
+  & p {
+    margin: 3rem 0;
+    line-height: 2;
+  }
+  & ul, ol {
+    margin: 1.5rem 0;
+    padding: 40px;
+    background-color: #f5f5f5;
+  }
+  & li { margin: 1rem 0; }
+  & li ul,
+  & li ol {
+    padding: 20px 0 0 40px;
+  }
+
   .form-group {
     display: grid;
     grid-template-columns: 1fr;
@@ -137,22 +175,23 @@
     }
     & label { margin: 0; }
   }
-  .info {
-    margin: 100px 0;
-    & h2, h3, h4, h5, h6 {
-      margin: 25px 0;
-      font-size: 1.5rem;
-    }
-    & p {
-      margin: 0;
-      text-align: center;
-    }
+  /* 埋め込み動画コンテンツ */
+  .is-type-video {
+    margin: 50px 0;
+    text-align: center;
   }
+  & :nth-child(1) { margin-top: 0; }
+  & :nth-last-child(1) { margin-bottom: 0; }
+}
+/* 投稿ページのみ */
+.page {
+  background-color: #f5f5f5;
 }
 @media screen and (max-width: 849px) {
-  .page-content {
+  .page-content-body {
+    margin: 0 20px;
     & h1, h2 {
-      font-size: 32px;
+      font-size: 2.5rem;
     }
     & h3, h4 {
       font-size: 24px;
@@ -167,7 +206,8 @@
 }
 @media screen and (min-width: 850px) {
   .page-title { padding: 100px 0 50px; }
-  .page-content {
+  .page-content-body {
+    padding: 50px 0;
     .form-group {
       grid-template-columns: 200px 1fr;
       row-gap: 35px;
@@ -192,6 +232,39 @@
 }
 .menu li a {
   display: block;
+}
+.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 15px;
+}
+.post-item {
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+.post-text {
+  font-family: sans-serif;
+  margin: 10px 5px 0;
+}
+.post-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.post-date {
+  color: #808080;
+  font-size: .8rem;
+}
+@media screen and (min-width: 600px) {
+  .post { grid-template-columns: repeat(2, auto); }
+}
+@media screen and (min-width: 850px) {
+  .post { grid-template-columns: repeat(3, auto); }
+  .post-item { transition-duration: 200ms; }
+  .post-item:hover .post-title { color: #1a306a; }
 }
 @media screen and (min-width: 1024px) {
   #header-nav .menu {
@@ -491,37 +564,9 @@ header {
     color: #c0c0c0;
     letter-spacing: .15rem;
   }
-  .post {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 15px;
-  }
-  .post-item {
-    & img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-  }
-  .post-text {
-    font-family: sans-serif;
-    margin: 10px 5px 0;
-  }
-  .post-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  .post-date {
-    color: #808080;
-    font-size: .8rem;
-  }
 }
 
 @media screen and (min-width: 600px) {
-  #late-post {
-    .post { grid-template-columns: repeat(2, auto); }
-  }
   #notice .headline,
   #late-post .headline,
   #brands .headline {
@@ -545,11 +590,6 @@ header {
       flex: 1
     }
     .post-item { width: 100%; }
-  }
-  #late-post {
-    .post { grid-template-columns: repeat(3, auto); }
-    .post-item { transition-duration: 200ms; }
-    .post-item:hover .post-title { color: #1a306a; }
   }
 }
 
