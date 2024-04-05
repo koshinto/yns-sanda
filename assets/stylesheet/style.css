@@ -24,6 +24,13 @@
   font-weight: bold;
 }
 
+.btn a {
+  padding: 20px 32px;
+  color: #fff;
+  background-color: #696969;
+  transition-duration: 300ms;
+}
+
 .text-chip {
   margin-left: 10px;
   padding: 5px;
@@ -197,6 +204,9 @@
 .page {
   background-color: #f5f5f5;
 }
+.page-404 .page-content-body {
+  text-align: center;
+}
 @media screen and (max-width: 849px) {
   .page-content-body {
     margin: 0 20px;
@@ -215,6 +225,15 @@
   }
 }
 @media screen and (min-width: 850px) {
+  .btn a {
+    color: #696969;
+    background-color: #fff;
+    border: 2px solid #696969;
+  }
+  .btn a:hover {
+    color: #fff;
+    background-color: #696969;
+  }
   .page-title { padding: 100px 0 50px; }
   .page-content-body {
     padding: 50px 0;
