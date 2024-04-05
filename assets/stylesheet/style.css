@@ -113,6 +113,12 @@
   & li ol {
     padding: 20px 0 0 40px;
   }
+  .wp-block-table table { border: 1px solid #f5f5f5;}
+  .wp-block-table tr:nth-child(even) { background-color: #f5f5f5; }
+  .wp-block-table td {
+    line-height: 2;
+    border: none;
+  }
 
   .form-group {
     display: grid;
