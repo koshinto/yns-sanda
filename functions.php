@@ -109,3 +109,31 @@ function theme_customizer_extension($wp_customize) {
   );
 }
 add_action( 'customize_register', 'theme_customizer_extension' );
+
+// お問い合わせフォーム
+function form_contact() {
+  if ( !is_page( 'contact' ) ) {
+    return;
+  }
+
+  if ( isset( $_POST['username'] ) ) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $to = "tyokoyoimi@yns-sanda.jp";
+    $subject = "お問い合わせがありました";
+    $body = "お名前：  {$username}\n"
+      . "メールアドレス：  {$email}\n"
+      . "メッセージ：\n{$message}\n";
+    
+    $from = "ワイエヌエス三田";
+    $headers = "From: {$from}<{$to}>\r\n";
+    $res = wp_mail($to, $subject, $body, $headers);
+
+    if( $res ) {
+      wp_safe_redirect( get_page_link( get_page_by_path( 'contact/complete' )->ID ) );
+    }
+  }
+}
+add_action("template_redirect", "form_contact");
