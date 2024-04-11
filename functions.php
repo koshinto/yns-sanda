@@ -18,7 +18,7 @@ add_filter( 'upload_mimes', 'custom_mime_types' );
 // カスタムメニュー
 register_nav_menus( array(
   'place_global' => 'グローバルメニュー',
-  'place_button_menu' => 'ヘッダーボタンメニュー',
+  'place_main_menu' => 'メインメニュー',
   'place_sitemap' => 'サイトマップ',
   'place_social_service' => 'ソーシャルネットワーク',
   'place_personal' => 'パーソナルメニュー',
