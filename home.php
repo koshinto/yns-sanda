@@ -95,7 +95,7 @@
 
   <section id="brands" class="brands">
     <div class="container">
-      <p class="headline-en headline-en-blue">The Brands</p>
+      <p class="headline-en">The Brands</p>
       <h2 class="headline">取扱銘柄</h2>
       <?php $brands_path = esc_url( get_template_directory_uri() ) . "/assets/images/brands/"; ?>
       <ul class="brand">

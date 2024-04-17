@@ -594,14 +594,14 @@ header {
   letter-spacing: .25rem;
 }
 .brand {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
-  & img {
-    display: block;
-    max-width: 150px;
+}
+
+@media screen and (min-width: 850px) {
+  .brand {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
