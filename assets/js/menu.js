@@ -1,17 +1,17 @@
-const main = document.querySelector("main");
-const btn = document.querySelector(".menu-btn-inner");
-const menus = document.getElementById("header-menus");
+const body = document.querySelector("body")
+const btn = document.querySelector(".menu-btn-inner")
+const slider = document.getElementById("header-slide")
 
 const initializer = (() => {
-  btn.classList.add("menu-bar-close");
-  menus.classList.remove("sp-menu-group-hidden")
-  console.log(btn);
-})();
+  body.classList.remove("scroll-y-lock")
+  btn.classList.remove("menu-bar-close")
+  slider.classList.remove("slide-in")
+})()
 
 btn.addEventListener("click", () => {
-  main.classList.toggle("sp-scroll-y-lock");
-  btn.classList.toggle("menu-bar-close");
-  menus.classList.toggle("sp-menu-group-hidden");
-});
+  body.classList.toggle("scroll-y-lock")
+  btn.classList.toggle("menu-bar-close")
+  slider.classList.toggle("slide-in")
+})
 
-console.log('loaded menu.js');
+console.log('loaded menu.js')

@@ -22,18 +22,46 @@
   <div class="site-description"><?php bloginfo('description'); ?></div>
   <div class="header-inner">
     <div class="sp-header">
-      <div class="header-logo">
-        <?php custom_logo_script(); ?>
+      <!-- スマートフォン用のヘッダー -->
+      <div class="header-top">
+        <div class="header-logo">
+          <?php custom_logo_script(); ?>
+        </div>
+        <div class="menu-btn pc-hidden">
+          <div class="menu-btn-inner">
+            <span class="menu-bar menu-bar-1"></span>
+            <span class="menu-bar menu-bar-2"></span>
+            <span class="menu-bar menu-bar-3"></span>
+          </div>
+        </div>
       </div>
-      <div class="menu-btn pc-hidden">
-        <div class="menu-btn-inner">
-          <span class="menu-bar menu-bar-1"></span>
-          <span class="menu-bar menu-bar-2"></span>
-          <span class="menu-bar menu-bar-3"></span>
+      <div class="header-slide-wraper">
+        <div id="header-slide" class="header-slide">
+          <nav id="header-main-menus" class="main-menu">
+            <?php
+            wp_nav_menu(
+              array(
+                'theme_location' => 'place_main_menu',
+                'container' => false
+              )
+            );
+            ?>
+          </nav>
+          <nav id="header-global-nav" class="global-nav">
+              <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'place_global',
+                  'container' => false
+                )
+              );
+              ?>
+          </nav>
         </div>
       </div>
     </div>
     <div class="pc-header">
+      <!-- パソコン用のヘッダー -->
       <div class="header-group">
         <div class="header-logo">
           <?php custom_logo_script(); ?>
