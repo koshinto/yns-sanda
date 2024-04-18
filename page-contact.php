@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     "Content-Type: text/plain" . "\r\n"
   );
 
-  wp_mail($email, $subject, $message, $headers);
-  wp_safe_redirect(home_url());
+  wp_mail($email, $user_subject, $message, $headers);
+  wp_safe_redirect(home_url(), 303);
   exit;
 
 } else {
