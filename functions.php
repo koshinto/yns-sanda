@@ -66,10 +66,11 @@ function insert_tab_panel( $menus ) {
   $menu_length = count( $menus );
   for ( $i = 0 ; $i < $menu_length ; $i ++ ) {
     $menu_items = wp_get_nav_menu_items( $menus[$i], array() );
+    $num = strval( $i + 1 );
     // ラベルを生成
-    $label .= '<li class="tab-label-item tab-label-item-' . $i + 1 . '" data-tab="' . $i + 1 .'">' .
+    $label .= '<li class="tab-label-item tab-label-item-' . $num . '" data-tab="' . $num .'">' .
       $menus[$i] . '</li>';
-    $panel .= '<li class="tab-panel-item tab-panel-item-' . $i + 1 . '" data-panel="' . $i + 1 . '"><ul>';
+    $panel .= '<li class="tab-panel-item tab-panel-item-' . $num . '" data-panel="' . $num . '"><ul>';
     // パネルを挿入
     foreach ( $menu_items as $menu_item ) {
       $panel .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
