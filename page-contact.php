@@ -1,13 +1,15 @@
 <?php
 get_header();
 
-// $msg = [];
+$msg = "";
 
 $admin_email = "tyokoyomi@yns-sanda.jp";
 $admin_subject = "問い合わせがありました";
 $user_subject = "お問い合わせが送信されました";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $msg = "送信されました";
+  
   $username = $_POST["username"];
   $email = htmlentities($_POST["email"]);
   $phone = htmlentities($_POST["phone"]);
@@ -30,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     "Content-Type: text/plain" . "\r\n"
   );
 
-  wp_mail($to, $subject, $message, $headers);
+  wp_mail($email, $subject, $message, $headers);
   wp_safe_redirect(home_url());
   exit;
 
@@ -61,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <div class="form-body">
               <?php if ($msg): ?>
-                      <div class="message">
-                        <p><?php echo $msg; ?></p>
-                      </div>
+                <div class="msg">
+                  <p><?php echo $msg; ?></p>
+                </div>
               <?php endif; ?>
               <dl class="form-group">
 
