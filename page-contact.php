@@ -1,17 +1,43 @@
 <?php
 get_header();
 
-$msg = "";
+// $msg = [];
 
-$to = "tyokoyomi@yns-sanda.jp";
-$subject = "テストメールを送信しました";
-$message = "コンタクトフォームへのアクセスがありました";
+$admin_email = "tyokoyomi@yns-sanda.jp";
+$admin_subject = "問い合わせがありました";
+$user_subject = "お問い合わせが送信されました";
 
-if( wp_mail( $to, $subject, $message ) ) {
-  $msg = "テストメールが送信されました";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $username = $_POST["username"];
+  $email = htmlentities($_POST["email"]);
+  $phone = htmlentities($_POST["phone"]);
+  $message = htmlentities($_POST["message"]);
+
+  // if (isset($username)) {
+  //   array_push($msg, "お名前が入力されていません");
+  // }
+  // if (isset($email) && is_email($email)) {
+  //   array_push($msg, "メールアドレスが正しくありません");
+  // }
+  // if (isset($message)) {
+  //   array_push($msg, "お問い合わせ内容が入力されていません");
+  // }
+
+  $timestamp = date("Y/m/d H:i");
+  $headers = array(
+    "Date: " . $timestamp . "\r\n",
+    "From: " . $email . "\r\n",
+    "Content-Type: text/plain" . "\r\n"
+  );
+
+  wp_mail($to, $subject, $message, $headers);
+  wp_safe_redirect(home_url());
+  exit;
+
 } else {
-  $msg = "メール送信に失敗しました";
+  $username = $email = $message = $phone = null;
 }
+
 ?>
 <main id="page">
   <div class="page-title">
@@ -34,15 +60,15 @@ if( wp_mail( $to, $subject, $message ) ) {
               </p>
             </div>
             <div class="form-body">
-              <?php if( $msg ): ?>
-              <div class="message">
-                <p><?php echo $msg; ?></p>
-              </div>
+              <?php if ($msg): ?>
+                      <div class="message">
+                        <p><?php echo $msg; ?></p>
+                      </div>
               <?php endif; ?>
               <dl class="form-group">
 
                 <dt class="form-label">
-                  <label for="username">氏名<span class="text-chip text-chip-require">必須</span></label>
+                  <label for="username">お名前<span class="text-chip text-chip-require">必須</span></label>
                 </dt>
                 <dd class="form-input">
                   <input id="username" name="username" type="text">
