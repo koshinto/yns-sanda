@@ -618,7 +618,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow: hidden;
   }
   .key-item {
     width: 100%;
