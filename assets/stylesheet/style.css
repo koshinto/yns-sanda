@@ -126,9 +126,8 @@
     :nth-child(1) { margin-top: 0; }
     :nth-last-child(1) { margin-bottom: 0; }
   }
-  .form-input p {
-    margin: 0;
-  }
+  .form-input p { margin: 0; }
+  .form-input label { font-weight: normal; }
   & label {
     font-weight: bold;
     user-select: none;
@@ -145,7 +144,6 @@
     margin-bottom: 15px;
     padding: 10px 15px;
     font-size: 1.25rem;
-    background-color: #e9edf1;
     border: 1px solid #acaeb1;
     border-radius: 5px;
   }
@@ -209,11 +207,14 @@
     & h3, h4 {
       font-size: 24px;
     }
-    & .form-label {
+    .form-label {
       margin-bottom: 10px;
     }
-    & .form-input {
+    .form-input {
       margin-bottom: 20px;
+    }
+    .form-checkbox {
+      line-height: 2;
     }
   }
 }
