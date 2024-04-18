@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+get_header();
+
+$msg = "";
+
+$to = "tyokoyomi@yns-sanda.jp";
+$subject = "テストメールを送信しました";
+$message = "コンタクトフォームへのアクセスがありました";
+
+if( wp_mail( $to, $subject, $message ) ) {
+  $msg = "テストメールが送信されました";
+} else {
+  $msg = "メール送信に失敗しました";
+}
+?>
 <main id="page">
   <div class="page-title">
     <?php
@@ -20,6 +34,11 @@
               </p>
             </div>
             <div class="form-body">
+              <?php if( $msg ): ?>
+              <div class="message">
+                <p><?php echo $msg; ?></p>
+              </div>
+              <?php endif; ?>
               <dl class="form-group">
 
                 <dt class="form-label">
@@ -75,6 +94,5 @@
   </div>
 </main>
 <?php
-dynamic_sidebar('bottom-widget-area');
 get_footer();
 ?>
