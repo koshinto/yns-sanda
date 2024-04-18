@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $username = $_POST["username"];
   $email = htmlentities($_POST["email"]);
   $phone = htmlentities($_POST["phone"]);
-  $message = htmlentities($_POST["message"]);
+  $message = "メッセージ内容: \r\n" . htmlentities($_POST["message"]);
 
   // if (isset($username)) {
   //   array_push($msg, "お名前が入力されていません");
@@ -33,11 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   );
 
   wp_mail($email, $user_subject, $message, $headers);
-  wp_safe_redirect(home_url(), 303);
+  wp_redirect(home_url(), 303);
   exit;
 
 } else {
   $username = $email = $message = $phone = null;
+  wp_redirect(home_url(), 303);
+  exit;
 }
 
 ?>
