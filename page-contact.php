@@ -33,13 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   );
 
   wp_mail($email, $user_subject, $message, $headers);
-  wp_redirect(home_url(), 303);
+  wp_safe_redirect(home_url(), 301);
   exit;
 
 } else {
   $username = $email = $message = $phone = null;
-  wp_redirect(home_url(), 303);
-  exit;
 }
 
 ?>
