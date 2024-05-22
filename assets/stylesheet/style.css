@@ -3,14 +3,12 @@
 @import url(./common.css) layer(common);
 
 :root {
-  --page-font: sans-serif;
   --primary-color: #1a306a;
   --primary-deep-color: #0f1f4b;
   --main-bg-color: #f8f9ff;
   --gray-color: #9cb1e3;
   --pale-black: #333;
   --paper-white: rgb(249, 251, 255);
-  font-family: sans-serif;
 }
 ::placeholder { color: #ccc; }
 .dark { display: none; }
@@ -280,16 +278,18 @@
   }
 }
 .post-text {
-  font-family: sans-serif;
   margin: 10px 5px 0;
 }
 .post-title {
-  font-size: 1.25rem;
+  color: #000;
   font-weight: bold;
+  font-size: 20px;
 }
 .post-date {
   color: #808080;
   font-size: .8rem;
+  /* letter-spacing: .07rem; */
+  text-transform: full-width;
 }
 @media screen and (min-width: 600px) {
   .post { grid-template-columns: repeat(2, auto); }
@@ -472,7 +472,6 @@ header {
 
 #tab {
   margin: 50px 0;
-  font-family: sans-serif;
   .tab-panel-item ul {
     display: flex;
     flex-direction: column;
@@ -664,7 +663,6 @@ header {
   background-color: rgb(227, 255, 227);
   .headline {
     padding-bottom: 50px;
-    font-family: sans-serif;
     font-weight: 700;
     color: #379f37;
     text-align: center;
@@ -723,7 +721,6 @@ header {
 /* フッター */
 #footer {
   display: grid;
-  font-family: var(--page-font);
   color: #696969;
   background-color: #eee;
   .sitemap,
