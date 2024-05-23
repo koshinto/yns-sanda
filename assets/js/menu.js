@@ -1,17 +1,11 @@
 const body = document.querySelector("body")
-const btn = document.querySelector(".menu-btn-inner")
-const slider = document.getElementById("header-slide")
+const open = document.getElementById("sp-menu-open")
+const close = document.getElementById("sp-menu-close")
 
-const initializer = (() => {
-  body.classList.remove("scroll-y-lock")
-  btn.classList.remove("menu-bar-close")
-  slider.classList.remove("slide-in")
-})()
-
-btn.addEventListener("click", () => {
-  body.classList.toggle("scroll-y-lock")
-  btn.classList.toggle("menu-bar-close")
-  slider.classList.toggle("slide-in")
+open.addEventListener("click", () => {
+  body.classList.toggle("sp-menu-open")
 })
 
-console.log('loaded menu.js')
+close.addEventListener("click", () => {
+  body.classList.toggle("sp-menu-open")
+})

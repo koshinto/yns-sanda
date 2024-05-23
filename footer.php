@@ -34,7 +34,6 @@
     </div>
 </footer>
 <?php wp_footer(); ?>
-<script type="module" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/menu.js"></script>
-<script type="module" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/tabpanel.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/menu.js"></script>
 </body>
 </html>
