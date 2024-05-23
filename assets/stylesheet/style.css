@@ -5,14 +5,14 @@
 :root {
   --primary-color: #1a306a;
   --primary-deep-color: #0f1f4b;
-  --main-bg-color: #f8f9ff;
+  --background: #eee;
   --white: #fff;
   --dark: #000;
 }
 
 header,
 footer {
-  background-color: #eee;
+  background-color: var(--background);
 }
 
 header {
@@ -156,5 +156,69 @@ main {
     .header-nav-menu {
       transform: translateX(0);
     }
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  header {
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+
+    .header-inner {
+      margin: 0 25px;
+    }
+    
+    .header-title a {
+      display: block;
+    }
+
+    .header-nav-menu {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    
+    .header-nav-menu .menu {
+      margin: 0 20px;
+      column-gap: 15px;
+      position: relative;
+    }
+
+    .header-nav-menu .menu a {
+      padding: 10px 0;
+    }
+    
+    .header-nav-menu .sub-menu {
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      background: var(--background);
+      transition: ease-in-out 200ms;
+      transform: translateX(-25px);
+    }
+
+    .header-nav-menu .sub-menu a {
+      padding: 10px 25px;
+    }
+
+    .header-nav-menu .menu-item:hover .sub-menu {
+      display: flex;
+    }
+
+    .sns-menu {
+      font-size: 1.25rem;
+      gap: 10px;
+    }
+    
+    .sns-menu a {
+      padding: 3px;
+    }
+  }
+  
+  main {
+    margin-top: 60px;
   }
 }
