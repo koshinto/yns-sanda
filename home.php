@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="page" class="page page-home">
+<main id="home" class="home page-home">
   <article class="contents">
     <section class="main-visual">
       <div class="main-visual-text">
