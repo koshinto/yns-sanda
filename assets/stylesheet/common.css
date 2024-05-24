@@ -24,6 +24,11 @@ body {
   display: none !important;
 }
 
+.btn {
+  padding: 15px 20px;
+  border: #333 solid 1px;
+}
+
 .thumbnail {
   display: block;
 }

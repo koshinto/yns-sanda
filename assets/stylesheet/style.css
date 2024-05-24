@@ -40,7 +40,95 @@ header {
 }
 
 main {
-  height: 500px;
+  .page-link {
+    margin: 50px 0;
+  }
+
+  .page-link-button {
+    text-align: center;
+  }
+
+  .page-link a {
+    display: inline-block;
+  }
+
+  .main-visual-image {
+    width: 100%;
+  }
+
+  .main-visual-text {
+    margin: 50px 0;
+  }
+
+  .main-visual-heading,
+  .main-visual-paragraph {
+    text-align: center;
+  }
+
+  .main-visual-heading {
+    margin: 15px 0;
+    letter-spacing: .25rem;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5;
+    & small {
+      font-size: .75em;
+    }
+  }
+
+  .main-visual-paragraph {
+    margin: 15px 0;
+    letter-spacing: .15rem;
+  }
+
+  .main-visual-button {
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  .main-visual-image img {
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  /* sections */
+  .mission {
+    color: #6699ff;
+    padding: 0 20px;
+  }
+
+  .mission .heading {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .mission-step {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .mission-step dd {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .mission-step dt {
+    width: 80%;
+    margin: 25px auto;
+  }
+  
+  .mission-step h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+
+  .mission-step p {
+    font-size: .85rem;
+  }
 }
 
 footer {
@@ -314,11 +402,28 @@ footer {
       padding: 3px;
     }
   }
-  
-  main {
-    margin-top: 60px;
-  }
 
+  main {
+    .main-visual-heading {
+      font-size: 3.75rem;
+    }
+
+    .main-visual-paragraph {
+      font-size: 1.25rem;
+    }
+
+    .mission-step {
+      padding: 0 50px;
+      flex-direction: row;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .mission-step dl {
+      width: 100%;
+    }
+  }
+  
   footer {
     .sitemap {
       flex-direction: row;
