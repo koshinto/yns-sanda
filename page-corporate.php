@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="page" class="page page-common">
+<main id="page" class="page page-corporate">
   <article class="contents corporate">
     <?php get_template_part('template-parts/pagetitle'); ?>
     <div class="page-container">
