@@ -41,10 +41,14 @@ header {
 
 main {
   .page-link {
+    display: block;
     margin: 50px 0;
+    text-align: center;
   }
 
   .page-link-button {
+    display: inline-block;
+    margin: 20px;
     text-align: center;
   }
 
@@ -66,12 +70,17 @@ main {
     object-fit: cover;
   }
 
+  .main-visual {
+    height: calc(100vh);
+    background: url(../images/main-visual.webp) bottom / cover no-repeat;
+  }
+
   .main-visual-image {
     width: 100%;
   }
 
   .main-visual-text {
-    margin: 50px 0;
+    padding: 50px 0;
   }
 
   .main-visual-heading,
@@ -101,15 +110,32 @@ main {
     text-align: center;
   }
 
+  .btn-visual {
+    display: inline-block;
+    background: rgba(255, 255, 255, .5);
+  }
+
   .main-visual-image img {
     max-height: 100%;
     width: auto;
     object-fit: cover;
   }
 
+  .hand-write-heading {
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  .hand-write-heading img {
+    display: inline-block;
+    width: 40%;
+    max-width: 250px;
+  }
+
   /* sections */
   .mission {
     color: #6699ff;
+    margin: 100px 0;
     padding: 0 20px;
   }
 
@@ -125,8 +151,8 @@ main {
     gap: 25px;
   }
 
-  .mission-step dd {
-    width: 50%;
+  .mission-step img {
+    max-width: 100px;
     margin: 0 auto;
   }
 
@@ -154,6 +180,10 @@ main {
 
   & figure {
     margin: 25px 0;
+  }
+
+  & iframe {
+    width: 100%;
   }
 
   .wp-block-heading {
@@ -184,7 +214,7 @@ main {
     & td,
     & th {
       border: none;
-      padding: 12px 8px;
+      padding: 12px;
     }
     
     & tr:nth-child(even) {
@@ -558,6 +588,10 @@ print {
       flex-direction: row;
       gap: 50px;
       padding: 50px 100px;
+    }
+
+    .sitemap a:hover {
+      opacity: .7;
     }
   }
 }

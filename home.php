@@ -4,11 +4,8 @@
     <section class="main-visual">
       <div class="main-visual-text">
         <p class="main-visual-paragraph">悩める新聞販売店・小売業界のオーナー様</p>
+        <p class="hand-write-heading"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/hand_write_heading.svg" alt="今こそ"></p>
         <h1 class="main-visual-heading"><small>令和の</small>経営改革</h1>
-        <p class="main-visual-button"><a href="/" class="btn btn-visual">相談する</a></p>
-      </div>
-      <div class="main-visual-image">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/main-visual.webp" alt="メインビジュアルのイメージ">
       </div>
     </section>
     <section class="mission">
@@ -40,6 +37,7 @@
       </div>
       <div class="page-link">
         <p class="page-link-button"><a href="" class="btn btn-link">記事を読む</a></p>
+        <p class="page-link-button"><a href="" class="btn btn-link">相談する</a></p>
       </div>
     </section>
   </article>
