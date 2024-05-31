@@ -9,6 +9,7 @@ add_image_size( 'key-visual', 1024, 640, true );
 add_image_size( 'common', 520, 240, true );
 add_image_size( 'post', 640, 480, true );
 add_image_size( 'logo', 200, 50, true );
+add_image_size( 'label', 256, 256, true);
 
 // SVGファイルのサポート
 function custom_mime_types( $mimes ) {	$mimes['svg'] = 'image/svg+xml';	return $mimes;

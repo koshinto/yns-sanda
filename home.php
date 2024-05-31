@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main id="home" class="home page-home">
-  <article class="contents">
+  <div class="contents">
     <section class="main-visual">
       <div class="main-visual-text">
         <p class="main-visual-paragraph">悩める新聞販売店・小売業界のオーナー様</p>
@@ -40,6 +40,55 @@
         <p class="page-link-button"><a href="" class="btn btn-link">相談する</a></p>
       </div>
     </section>
-  </article>
+    <section id="main-tab-menu" class="tab-menu">
+      <ul class="tab-label" role="tablist">
+        <li class="tab-label-item" data-tab="1">プレスリリース</li>
+        <li class="tab-label-item" data-tab="2">スケジュール</li>
+      </ul>
+      <div class="tab-panel">
+        <?php
+          $the_query = new WP_Query( array('category_name' => 'press') );
+          if( $the_query->have_posts() ):
+            $i = 0;
+            $num = 5; // 投稿の表示数 / Display number
+            echo '<ul class="post">';
+            while( $the_query->have_posts() &&  $i < $num):
+              $the_query->the_post();
+        ?>
+          <li class="post-item" data-panel="<?php echo $i + 1; ?>">
+            <article class="post-contents">
+              <a href="<?php esc_html( the_permalink() ); ?>">
+                <div class="post-column-left">
+                  <span class="post-date"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></span>
+                  <h3 class="post-heading"><?php echo esc_html( get_the_title() ); ?></h3>
+                </div>
+                <div class="post-column-right">
+                  <?php 
+                    if( has_post_thumbnail() ): 
+                      the_post_thumbnail( 'label' );
+                    else:
+                  ?>
+                    <img
+                      src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/no_image.webp"
+                      srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/no_image@2x.webp 2x"
+                      alt="noimage"
+                      width="64"
+                      height="64"
+                    >
+                  <?php endif; ?>
+                </div>
+              </a>
+            </article>
+          </li>
+        <?php
+              $i ++;
+            endwhile;
+            echo '</ul>';
+          endif;
+          wp_reset_postdata();
+        ?>
+      </div>
+    </section>
+  </div>
 </main>
 <?php get_footer(); ?>

@@ -273,6 +273,60 @@ main {
   background: url(.././images/1x/shippou.webp) repeat;
 }
 
+/* メインタブメニュー */
+#main-tab-menu {
+  .tab-label {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 5px;
+  }
+
+  .tab-panel {
+    background: lightgray;
+  }
+
+  .tab-label-item {
+    background: lightgray;
+    padding: 10px 25px;
+    border-radius: 5px 5px 0 0;
+  }
+  .post {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .post-contents a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .post-column-left {
+    display: flex;
+  }
+
+  .post-heading {
+    font-size: .8rem;
+    color: gray;
+    margin-left: 15px;
+  }
+
+  .post-date {
+    font-size: .5rem;
+    color: gray;
+  }
+
+  .post-column-right img {
+    margin-left: auto;
+    width: 64px;
+    height: 64px;
+  }
+}
+
 footer {
   display: grid;
 
