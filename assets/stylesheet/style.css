@@ -172,6 +172,7 @@ main {
   }
 }
 
+#single,
 #page {
   & p {
     margin: 15px 0;
@@ -182,8 +183,16 @@ main {
     margin: 25px 0;
   }
 
+  & figcaption {
+    text-align: center;
+    font-size: .75rem;
+    color: gray;
+  }
+
   & iframe {
     width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .wp-block-heading {
@@ -211,6 +220,7 @@ main {
   }
 
   .wp-block-table table {
+
     & td,
     & th {
       border: none;
@@ -257,6 +267,32 @@ main {
   }
 }
 
+#single {
+  & ul {
+    margin: 50px 0;
+    padding: 20px;
+    padding-left: 40px;
+    border: 2px double lightgray;
+    background: rgb(242, 242, 242);
+  }
+  
+  & ul li {
+    &:first-child {
+      margin-top: 0;
+    }
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul li > ul {
+    padding: 0 0 0 20px;
+    list-style: circle;
+    border: none;
+  }
+}
+
 #page.page-corporate .page-title {
   background: url(.././images/オフィス街.webp) center / cover;
 }
@@ -276,6 +312,7 @@ main {
 /* メインタブメニュー */
 #main-tab-menu {
   margin: 50px 0;
+
   .tab-label {
     margin: 0;
     padding: 0;
@@ -315,7 +352,7 @@ main {
   .tab-panel.is-show {
     display: flex;
   }
-  
+
   .post-contents a {
     width: 100%;
     display: flex;
@@ -349,6 +386,33 @@ main {
     width: 64px;
     height: 64px;
     aspect-ratio: 1;
+  }
+}
+
+#writer {
+  margin: 100px 0 50px;
+  padding: 25px;
+  display: flex;
+  gap: 25px;
+  border: lightgray solid 1px;
+  border-radius: 5px;
+
+  .author-icon {
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .author-description {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .avatar {
+    border-radius: 50%;
   }
 }
 
@@ -646,13 +710,19 @@ print {
     }
   }
 
+  #single,
   #page {
     & p {
       margin: 25px 0;
     }
 
+    & figure {
+      margin: 50px 0 100px;
+    }
+
     .wp-block-heading {
       margin: 100px 0 50px;
+      line-height: 1.5;
     }
 
     .wp-block-column {
@@ -666,9 +736,14 @@ print {
     .tab-label {
       column-gap: 15px;
     }
+
     .tab-label-item {
       padding: 12px 50px;
     }
+  }
+
+  #writer {
+    gap: 25px;
   }
 
   footer {
