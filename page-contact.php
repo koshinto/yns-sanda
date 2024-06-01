@@ -35,16 +35,13 @@ get_header();
 ?>
 <main id="page" class="page page-contact">
   <article class="contents corporate">
+    <?php get_template_part( 'template-parts/pagetitle' ); ?>
+      <div class="page-container">
     <?php
-      get_template_part('template-parts/pagetitle');
       if ( have_posts() ): while ( have_posts() ): the_post();
         the_content();
       endwhile; endif;
     ?>
-    <div class="page-container">
-      <h2>お問い合わせフォーム</h2>
-      <p>下記フォームに入力いただき、送信ください。</p>
-      <form action="<?php the_permalink(); ?>" method="post"></form>
     </div>
   </article>
 </main>
