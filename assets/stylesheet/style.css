@@ -206,7 +206,7 @@ main {
     transform: translateX(-50%);
   }
 
-  .wp-block-column > .wp-block-heading {
+  .wp-block-column>.wp-block-heading {
     margin: 0 0 25px;
   }
 
@@ -216,7 +216,7 @@ main {
       border: none;
       padding: 12px;
     }
-    
+
     & tr:nth-child(even) {
       background-color: #efefef;
     }
@@ -275,28 +275,47 @@ main {
 
 /* メインタブメニュー */
 #main-tab-menu {
+  margin: 50px 0;
   .tab-label {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    column-gap: 5px;
-  }
-
-  .tab-panel {
-    background: lightgray;
+    column-gap: 10px;
+    justify-content: center;
   }
 
   .tab-label-item {
     background: lightgray;
     padding: 10px 25px;
     border-radius: 5px 5px 0 0;
+    user-select: none;
+    cursor: pointer;
   }
-  .post {
-    display: flex;
+
+  .tab-label-item.is-active {
+    background: whitesmoke;
+  }
+
+  .tab-panel-wrap {
+    padding: 25px;
+    background: whitesmoke;
+  }
+
+  .tab-panel {
+    display: none;
     flex-direction: column;
-    gap: 7px;
+    gap: 10px;
+    max-width: 718px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
   }
+
+  .tab-panel.is-show {
+    display: flex;
+  }
+  
   .post-contents a {
     width: 100%;
     display: flex;
@@ -307,6 +326,7 @@ main {
 
   .post-column-left {
     display: flex;
+    flex-shrink: 1;
   }
 
   .post-heading {
@@ -320,10 +340,15 @@ main {
     color: gray;
   }
 
+  .post-column-right {
+    flex-shrink: 0;
+  }
+
   .post-column-right img {
     margin-left: auto;
     width: 64px;
     height: 64px;
+    aspect-ratio: 1;
   }
 }
 
@@ -634,6 +659,15 @@ print {
       &:nth-child(1) {
         margin-top: 0;
       }
+    }
+  }
+
+  #main-tab-menu {
+    .tab-label {
+      column-gap: 15px;
+    }
+    .tab-label-item {
+      padding: 12px 50px;
     }
   }
 

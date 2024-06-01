@@ -28,6 +28,9 @@
   </div>
 </footer>
 <?php wp_footer(); ?>
+<?php if( is_home() ): ?>
+  <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/tabpanel.js"></script>
+<?php endif; ?>
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/menu.js"></script>
 </body>
 </html>
