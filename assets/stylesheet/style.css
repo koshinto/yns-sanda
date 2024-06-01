@@ -781,6 +781,14 @@ print {
     .tab-label-item {
       padding: 12px 50px;
     }
+
+    .post-date {
+      font-size: .75rem;
+    }
+
+    .post-heading {
+      font-size: 1rem;
+    }
   }
 
   #writer {
