@@ -90,8 +90,10 @@ main {
 
   .main-visual .card {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    column-gap: 25px;
     z-index: 50;
   }
 
@@ -99,7 +101,6 @@ main {
     flex-shrink: 0;
     width: 80%;
     height: auto;
-    margin: 0 20px;
   }
   
   .main-visual .card-item img {
@@ -601,6 +602,7 @@ footer {
       transform: translateX(-100%);
       overflow-y: scroll;
       transition: ease-in-out 150ms;
+      z-index: 1000;
     }
 
     .menu,
@@ -667,6 +669,7 @@ footer {
 
     &::before {
       display: block;
+      z-index: 999;
     }
 
     .header-nav-menu {
