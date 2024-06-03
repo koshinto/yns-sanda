@@ -71,54 +71,76 @@ main {
   }
 
   .main-visual {
-    height: calc(100vh);
-    background: url(../images/main-visual.webp) bottom / cover no-repeat;
-  }
-
-  .main-visual-image {
+    position: relative;
     width: 100%;
+    height: 20%;
+    margin: 20px 0 35px;
   }
 
-  .main-visual-text {
-    padding: 50px 0;
+  .main-visual::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    transform: translateY(15px);
+    background: url(../images/1x/cube_outline.webp) repeat;
+    z-index: -1;
   }
 
-  .main-visual-heading,
-  .main-visual-paragraph {
-    text-align: center;
+  .main-visual .card {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    z-index: 50;
   }
 
-  .main-visual-heading {
-    margin: 15px 0;
-    letter-spacing: .25rem;
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 1.5;
-
-    & small {
-      font-size: .75em;
-    }
+  .main-visual .card-item {
+    flex-shrink: 0;
+    width: 80%;
+    height: auto;
+    margin: 0 20px;
+  }
+  
+  .main-visual .card-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
-  .main-visual-paragraph {
-    margin: 15px 0;
-    letter-spacing: .15rem;
+  .seminar-list {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 60px;
+    background: url(../images/1x/cube_outline.webp) repeat;
+    z-index: 1;
   }
 
-  .main-visual-button {
-    margin: 50px 0;
-    text-align: center;
+  .card-ctl-button {
+    position: absolute;
+    display: grid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .8);
+    place-items: center;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev-button {
+    left: 10px;
+  }
+
+  .next-button {
+    right: 10px;
   }
 
   .btn-visual {
     display: inline-block;
     background: rgba(255, 255, 255, .5);
-  }
-
-  .main-visual-image img {
-    max-height: 100%;
-    width: auto;
-    object-fit: cover;
   }
 
   .hand-write-heading {
@@ -667,7 +689,6 @@ footer {
       margin: 0;
     }
   }
-
 }
 
 @media screen and (min-width: 768px),
@@ -731,14 +752,6 @@ print {
   }
 
   main {
-    .main-visual-heading {
-      font-size: 3.75rem;
-    }
-
-    .main-visual-paragraph {
-      font-size: 1.25rem;
-    }
-
     .mission-step {
       padding: 0 50px;
       flex-direction: row;

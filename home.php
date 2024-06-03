@@ -2,11 +2,38 @@
 <main id="home" class="home page-home">
   <div class="contents">
     <section class="main-visual">
-      <div class="main-visual-text">
-        <p class="main-visual-paragraph">悩める新聞販売店・小売業界のオーナー様</p>
-        <p class="hand-write-heading"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/hand_write_heading.svg" alt="今こそ"></p>
-        <h1 class="main-visual-heading"><small>令和の</small>経営改革</h1>
-      </div>
+      <?php 
+        $the_query = new WP_Query( array(
+          'category_name' => 'seminar',
+          'posts_per_page' => 5
+        ) );
+        if( $the_query->have_posts() ):
+          echo '<ul class="card">';
+          while( $the_query->have_posts() ):  $the_query->the_post();
+      ?>
+        <li class="card-item">
+          <a href="<?php the_permalink(); ?>">
+            <?php
+              if( has_post_thumbnail() ):
+                the_post_thumbnail( 'card' );
+              else:
+            ?>
+            <img
+                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/no_image.webp"
+                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/no_image@2x.webp 2x"
+                alt="noimage"
+              >
+            <?php endif; ?>
+          </a>
+        </li>
+      <?php
+          endwhile;
+        echo '</ul>';
+        endif;
+        wp_reset_postdata();
+      ?>
+      <div class="card-ctl-button prev-button"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="card-ctl-button next-button"><i class="fa-solid fa-chevron-right"></i></div>
     </section>
     <section class="mission">
       <div class="heading">
