@@ -10,10 +10,11 @@
   <meta property="og:description" content="<?php $description; ?>">
   <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ogp-image.webp">
   <title><?php echo esc_html(wp_get_document_title()); ?></title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/stylesheet/style.css" type="text/css">

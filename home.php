@@ -2,38 +2,15 @@
 <main id="home" class="home page-home">
   <div class="contents">
     <section class="main-visual">
-      <?php 
-        $the_query = new WP_Query( array(
-          'category_name' => 'seminar',
-          'posts_per_page' => 5
-        ) );
-        if( $the_query->have_posts() ):
-          echo '<ul class="card">';
-          while( $the_query->have_posts() ):  $the_query->the_post();
-      ?>
-        <li class="card-item">
-          <a href="<?php the_permalink(); ?>">
-            <?php
-              if( has_post_thumbnail() ):
-                the_post_thumbnail( 'card' );
-              else:
-            ?>
-            <img
-                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/no_image.webp"
-                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/no_image@2x.webp 2x"
-                alt="noimage"
-              >
-            <?php endif; ?>
-          </a>
-        </li>
-      <?php
-          endwhile;
-        echo '</ul>';
-        endif;
-        wp_reset_postdata();
-      ?>
-      <div class="card-ctl-button prev-button"><i class="fa-solid fa-chevron-left"></i></div>
-      <div class="card-ctl-button next-button"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="main-visual-wrap">
+        <div class="main-visual-left">
+          <span class="main-headline handwrite">The Think.</span>
+        </div>
+        <div class="main-visual-right">
+          <span class="main-visual-message">これからの新聞販売店を</span>
+          <span class="main-visual-message">考える</span>
+        </div>
+      </div>
     </section>
     <section class="mission">
       <div class="heading">
