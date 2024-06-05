@@ -171,6 +171,7 @@ main {
   }
 
   #seminar {
+    padding-bottom: 50px;
     .seminars-wrap {
       display: grid;
       grid-template-columns: auto;
@@ -181,6 +182,10 @@ main {
       border: lightgray .5px solid;
     }
 
+    .post-seminar:hover .seminar-title {
+      text-decoration: underline;
+    }
+
     .seminar-info {
       margin: 20px;
       margin-bottom: 0;
@@ -189,12 +194,14 @@ main {
     .seminar-title {
       font-size: 1.25rem;
       margin: 20px 0;
+      line-height: 1.5;
       white-space: pre-line;
     }
 
     .seminar-date,
     .seminar-author {
       color: lightgray;
+      font-size: 14px;
     }
 
     .seminar-date::after {
