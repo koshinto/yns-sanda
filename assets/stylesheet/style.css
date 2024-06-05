@@ -822,6 +822,19 @@ print {
     .mission-step dl {
       width: 100%;
     }
+
+    #seminar {
+      .seminars-wrap {
+        max-width: 768px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, auto);
+      }
+
+      .image {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+    }
   }
 
   #single,

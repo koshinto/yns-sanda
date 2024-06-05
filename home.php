@@ -21,6 +21,7 @@
         <?php
         $the_query = new WP_Query(array(
           'category_name' => 'seminar',
+          'posts_per_page' => 6
         ));
         if ($the_query->have_posts()):
           while ($the_query->have_posts()):
@@ -28,7 +29,13 @@
             ?>
         <article class="post-seminar">
           <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail(); ?>
+          <?php
+            if( has_post_thumbnail() ):
+               the_post_thumbnail( 'tile', array( 'class' => 'image'));
+            else:
+              echo '<img class="image no-image" src="' . esc_url(get_template_directory_uri()) . '/assets/images/1x/no_image.webp" alt="no image">';
+            endif;
+          ?>
               <div class="seminar-info">
                 <h2 class="seminar-title"><?php the_title();?></h2>
                 <span class="seminar-date"><?php the_date('Y.m.d'); ?></span>
