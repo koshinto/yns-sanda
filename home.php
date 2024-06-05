@@ -13,9 +13,9 @@
       </div>
     </section>
     <section id="seminar">
-      <div class="seminar-headline">
+      <div class="headline">
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/seminar.svg" alt="セミナー">
-        <p class="seminar-headline-subtext">セミナー情報</p>
+        <p class="headline-subtext">セミナー情報</p>
       </div>
       <div class="seminars-wrap">
         <?php
@@ -41,6 +41,41 @@
                 <span class="seminar-date"><?php the_date('Y.m.d'); ?></span>
                 <span class="seminar-author"><?php the_author(); ?></span>
               </div>
+          </a>
+        </article>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div>
+    </section>
+    <section id="press">
+      <div class="headline">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/press.svg" alt="セミナー">
+        <p class="headline-subtext">プレスリリース</p>
+      </div>
+      <div class="presses-wrap">
+        <?php
+        $the_query = new WP_Query(array(
+          'category_name' => 'press',
+          'posts_per_page' => 6
+        ));
+        if ($the_query->have_posts()):
+          while ($the_query->have_posts()):
+            $the_query->the_post();
+            ?>
+        <article class="post-press">
+          <a href="<?php the_permalink(); ?>">
+          <span class="press-info press-date"><?php the_date('Y.m.d'); ?></span>
+          <h2 class="press-info press-title"><?php the_title();?></h2>
+          <?php
+            if( has_post_thumbnail() ):
+               the_post_thumbnail( 'thumbnail', array( 'class' => 'image'));
+            else:
+              echo '<img class="image no-image" src="' . esc_url(get_template_directory_uri()) . '/assets/images/1x/no_image.webp" alt="no image">';
+            endif;
+          ?>
           </a>
         </article>
         <?php

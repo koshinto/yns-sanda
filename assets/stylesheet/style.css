@@ -155,22 +155,22 @@ main {
   }
 
   /* sections */
+  .headline {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .headline img {
+    display: inline-block;
+    max-width: 350px;
+  }
+
+  .headline-subtext {
+    margin-top: 16px;
+    font-weight: bold;
+  }
+
   #seminar {
-    .seminar-headline {
-      padding: 50px 0;
-      text-align: center;
-    }
-
-    .seminar-headline img {
-      display: inline-block;
-      max-width: 350px;
-    }
-
-    .seminar-headline-subtext {
-      margin-top: 16px;
-      font-weight: bold;
-    }
-
     .seminars-wrap {
       display: grid;
       grid-template-columns: auto;
@@ -210,6 +210,55 @@ main {
     .post-seminar img {
       width: 100%;
       height: auto;
+    }
+  }
+
+  #press {
+    padding-bottom: 50px;
+    background: #f4fff4;
+
+    .headline-subtext {
+      color: #2ebf40;
+    }
+
+    .presses-wrap {
+      max-width: 768px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      border-top: #abe5b2 solid 1px;
+      border-bottom: #abe5b2 solid .5px;
+    }
+
+    .post-press a {
+      box-sizing: border-box;
+      padding: 15px;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 100px auto 72px;
+    }
+
+    .post-press:hover {
+      background: #eafeed;
+    }
+
+    .post-press:not(:last-child) {
+      border-bottom: #c9f5cf solid .5px;
+    }
+
+    .press-title {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .press-date {
+      font-size: .75rem;
+    }
+
+    .image {
+      margin-left: auto;
+      width: 72px;
+      height: 72px;
     }
   }
 
@@ -833,6 +882,12 @@ print {
       .image {
         aspect-ratio: 16 / 9;
         object-fit: cover;
+      }
+    }
+
+    #press {
+      .post-press a {
+        padding: 15px 30px;
       }
     }
   }
