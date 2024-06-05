@@ -14,7 +14,9 @@
     </section>
     <section id="seminar">
       <div class="headline">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/seminar.svg" alt="セミナー">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/seminar.png"
+          srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/seminar@2x.png 2x"
+          alt="セミナー">
         <p class="headline-subtext">セミナー情報</p>
       </div>
       <div class="seminars-wrap">
@@ -52,7 +54,9 @@
     </section>
     <section id="press">
       <div class="headline">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/press.svg" alt="セミナー">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/press.png"
+          srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/press@2x.png 2x"
+          alt="セミナー">
         <p class="headline-subtext">プレスリリース</p>
       </div>
       <div class="presses-wrap">
@@ -87,7 +91,9 @@
     </section>
     <section id="service">
       <div class="headline">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/service.svg" alt="サービス">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/service.png"
+          srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/service@2x.png 2x"
+          alt="サービス">
         <p class="headline-subtext">サービス</p>
       </div>
       <div class="services-wrap">
