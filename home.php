@@ -4,7 +4,7 @@
     <section class="main-visual">
       <div class="main-visual-wrap">
         <div class="main-visual-left">
-          <span class="main-headline handwrite">The Think.</span>
+          <span class="main-headline handwrite">Think about the future.</span>
         </div>
         <div class="main-visual-right">
           <span class="main-visual-message">これからの新聞販売店を</span>
@@ -157,21 +157,33 @@
       </div>
       <div class="mission-step">
         <dl>
-          <dd><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/google_map_icon.svg" alt="googleマップの活用"></dd>
+          <dd>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/google_map_icon.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/google_map_icon@2x.png 2x"
+              alt="googleマップの活用">
+          </dd>
           <dt>
             <h2>新媒体の活用</h2>
             <p>Googleマップなどを活用してユーザーからより認知されより集客しやすくします。</p>
           </dt>
         </dl>
         <dl>
-          <dd><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/magnifying_glass_icon.svg" alt="地域課題の発見"></dd>
+          <dd>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/magnifying_glass_icon.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/magnifying_glass_icon@2x.png 2x"
+              alt="地域課題の発見">
+          </dd>
           <dt>
             <h2>地域課題の発見</h2>
             <p>オーナー様の地域にもきっとたくさんの課題があるはずです。</p>
           </dt>
         </dl>
         <dl>
-          <dd><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/flash_icon.svg" alt="新規事業の開拓"></dd>
+          <dd>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/flash_icon.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/flash_icon@2x.png 2x"
+              alt="新規事業の開拓">
+          </dd>
           <dt>
             <h2>新規事業の開拓</h2>
             <p>発見した地域課題の解決は新たなビジネスチャンスかもしれません。</p>
