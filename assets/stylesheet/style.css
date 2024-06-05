@@ -269,6 +269,106 @@ main {
     }
   }
 
+  #service {
+    padding-bottom: 50px;
+    background: #eff6fb;
+
+    .services-wrap {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .service-item {
+      margin-top: 50px;
+      background: #fff;
+      border-radius: 25px;
+    }
+
+    .service-head {
+      position: relative;
+      height: 120px;
+      border-radius: 25px 25px 0 0;
+    }
+
+    .service-head img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50px);
+      width: 120px;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .service-description li {
+      margin: 16px 0;
+    }
+
+    .service-pricing {
+      padding-bottom: 16px;
+      text-align: center;
+      font-family: serif;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .service-pricing .currency,
+    .service-pricing .price-per {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    .service-google-business {
+      .service-head {
+        background: #3f51b5;
+      }
+      
+      .service-title {
+        color: #fff;
+      }
+    }
+
+    .service-line {
+      .service-head {
+        background: #06C755;
+      }
+
+      .service-title {
+        color: #fff;
+      }
+    }
+
+    .service-website {
+      .service-head {
+        background: #b53f3f;
+      }
+
+      .service-title {
+        color: #fff;
+      }
+    }
+
+    .service-lecture {
+      .service-head {
+        background: #1386e5;
+      }
+
+      .service-title {
+        color: #fff;
+      }
+    }
+  }
+
   .mission {
     color: #6699ff;
     margin: 100px 0;
@@ -895,6 +995,13 @@ print {
     #press {
       .post-press a {
         padding: 15px 30px;
+      }
+    }
+
+    #service {
+      .services-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
       }
     }
   }

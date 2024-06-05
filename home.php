@@ -85,6 +85,72 @@
         ?>
       </div>
     </section>
+    <section id="service">
+      <div class="headline">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/service.svg" alt="サービス">
+        <p class="headline-subtext">サービス</p>
+      </div>
+      <div class="services-wrap">
+        <div class="service-item service-google-business">
+          <div class="service-head">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/google_business.svg" alt="グーグルビジネスプロフィール">
+            <h2 class="service-title">Googleビジネスプロフィール</h2>
+          </div>
+          <ul class="service-description">
+            <li>Googleビジネスプロフィール開設代行</li>
+            <li>Googleビジネスプロフィール運営代行</li>
+          </ul>
+          <div class="service-pricing">
+            <p><span class="currency">￥</span>10,000<span class="price-per">/回 〜</span></p>
+          </div>
+        </div>
+
+        <div class="service-item service-line">
+          <div class="service-head">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/line.svg" alt="ライン">
+            <h2 class="service-title">公式LINEアカウント</h2>
+          </div>
+          <ul class="service-description">
+            <li>LINE公式アカウント開設代行</li>
+            <li>LINE公式アカウント運営代行</li>
+          </ul>
+          <div class="service-pricing">
+            <p><span class="currency">￥</span>10,000<span class="price-per">/回 〜</span></p>
+          </div>
+        </div>
+
+        <div class="service-item service-website">
+          <div class="service-head">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/window.svg" alt="ウェブサイト制作">
+            <h2 class="service-title">店舗Webサイト</h2>
+          </div>
+          <ul class="service-description">
+            <li>ホームページ制作</li>
+            <li>留守止・お問い合わせフォーム設置</li>
+          </ul>
+          <div class="service-pricing">
+            <p><span class="currency">￥</span>10,000<span class="price-per">/ページ 〜</span></p>
+          </div>
+        </div>
+
+        <div class="service-item service-lecture">
+          <div class="service-head">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/lecture.svg" alt="セミナー・講演">
+            <h2 class="service-title">セミナー・講演</h2>
+          </div>
+          <ul class="service-description">
+            <li>「私の経営戦略」</li>
+            <li>「地域課題解決企業を目指す」</li>
+            <li>「子供のためのお金の講座」</li>
+            <li>「子供のための新聞読み方講座」</li>
+            <li>「社会人のための新聞活用セミナー」</li>
+          </ul>
+          <div class="service-pricing">
+            <p><span class="currency">￥</span>10,000<span class="price-per">/回 （１時間）〜</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="mission">
       <div class="heading">
         <h2>私たちにできる提案</h2>
