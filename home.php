@@ -93,7 +93,9 @@
       <div class="services-wrap">
         <div class="service-item service-google-business">
           <div class="service-head">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/google_business.svg" alt="グーグルビジネスプロフィール">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/google_business.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/google_business@2x.png 2x"
+              alt="グーグルビジネスプロフィール">
             <h2 class="service-title">Googleビジネスプロフィール</h2>
           </div>
           <ul class="service-description">
@@ -107,7 +109,9 @@
 
         <div class="service-item service-line">
           <div class="service-head">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/line.svg" alt="ライン">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/line.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/line@2x.png 2x"
+              alt="ライン">
             <h2 class="service-title">公式LINEアカウント</h2>
           </div>
           <ul class="service-description">
@@ -121,7 +125,9 @@
 
         <div class="service-item service-website">
           <div class="service-head">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/window.svg" alt="ウェブサイト制作">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/window.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/window@2x.png 2x"
+              alt="ウェブサイト制作">
             <h2 class="service-title">店舗Webサイト</h2>
           </div>
           <ul class="service-description">
@@ -135,7 +141,9 @@
 
         <div class="service-item service-lecture">
           <div class="service-head">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/lecture.svg" alt="セミナー・講演">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/1x/lecture.png"
+              srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/2x/lecture@2x.png 2x"
+              alt="セミナー・講演">
             <h2 class="service-title">セミナー・講演</h2>
           </div>
           <ul class="service-description">
