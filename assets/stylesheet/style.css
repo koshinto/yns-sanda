@@ -155,6 +155,64 @@ main {
   }
 
   /* sections */
+  #seminar {
+    .seminar-headline {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .seminar-headline img {
+      display: inline-block;
+      max-width: 350px;
+    }
+
+    .seminar-headline-subtext {
+      margin-top: 16px;
+      font-weight: bold;
+    }
+
+    .seminars-wrap {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    .post-seminar {
+      padding: 25px;
+      border: lightgray .5px solid;
+    }
+
+    .seminar-info {
+      margin: 20px;
+      margin-bottom: 0;
+    }
+
+    .seminar-title {
+      font-size: 1.25rem;
+      margin: 20px 0;
+      white-space: pre-line;
+    }
+
+    .seminar-date,
+    .seminar-author {
+      color: lightgray;
+    }
+
+    .seminar-date::after {
+      display: inline-block;
+      content: "|";
+      margin: 0 10px;
+    }
+
+    .seminar-author {
+      letter-spacing: .05rem;
+    }
+
+    .post-seminar img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .mission {
     color: #6699ff;
     margin: 100px 0;

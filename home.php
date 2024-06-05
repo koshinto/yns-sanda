@@ -12,6 +12,37 @@
         </div>
       </div>
     </section>
+    <section id="seminar">
+      <div class="seminar-headline">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/seminar.svg" alt="セミナー">
+        <p class="seminar-headline-subtext">セミナー情報</p>
+      </div>
+      <div class="seminars-wrap">
+        <?php
+        $the_query = new WP_Query(array(
+          'category_name' => 'seminar',
+        ));
+        if ($the_query->have_posts()):
+          while ($the_query->have_posts()):
+            $the_query->the_post();
+            ?>
+        <article class="post-seminar">
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail(); ?>
+              <div class="seminar-info">
+                <h2 class="seminar-title"><?php the_title();?></h2>
+                <span class="seminar-date"><?php the_date('Y.m.d'); ?></span>
+                <span class="seminar-author"><?php the_author(); ?></span>
+              </div>
+          </a>
+        </article>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div>
+    </section>
     <section class="mission">
       <div class="heading">
         <h2>私たちにできる提案</h2>
@@ -39,10 +70,6 @@
           </dt>
         </dl>
       </div>
-      <div class="page-link">
-        <p class="page-link-button"><a href="" class="btn btn-link">記事を読む</a></p>
-        <p class="page-link-button"><a href="" class="btn btn-link">相談する</a></p>
-      </div>
     </section>
     <section id="main-tab-menu" class="tab-menu">
       <ul class="tab-label">
@@ -50,10 +77,10 @@
         <li class="tab-label-item" data-tab="2">スケジュール</li>
       </ul>
       <div class="tab-panel-wrap">
-        <?php get_template_part( 'template-parts/tab-menu', 'press', $args = array('category' => 'press', 'number' => 5, 'panel' => 1) ); ?>
-        <?php get_template_part( 'template-parts/tab-menu', 'seminar', $args = array('category' => 'seminar', 'number' => 5, 'panel' => 2) ); ?>
+        <?php get_template_part('template-parts/tab-menu', 'press', $args = array('category' => 'press', 'number' => 5, 'panel' => 1)); ?>
+        <?php get_template_part('template-parts/tab-menu', 'seminar', $args = array('category' => 'seminar', 'number' => 5, 'panel' => 2)); ?>
       </div>
     </section>
-  </div>
+  </section>
 </main>
 <?php get_footer(); ?>
