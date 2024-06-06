@@ -53,7 +53,9 @@ function custom_logo_script() {
   if ( has_custom_logo() ) {
     $custom_logo_id = get_theme_mod( 'custom_logo' );
     $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-    $tag = '<a id="header-logo" class="corplogo light" href="' . home_url() . '">'. '<img src="' . $logo[0] . '" alt="logo"></a>';
+    $tag .= '<a id="header-logo" class="corplogo light" href="' . home_url() . '">';
+    $tag .= '<img src="' . $logo[0] . '" alt="' . get_bloginfo( 'name' ) . '">';
+    $tag .= '</a>';
   } else {
     $tag = '<a id="header-logo" class="corplogo light" href="' . home_url() . '"><h1>' . get_bloginfo( 'name' ) . '</h1></a>';
   }
