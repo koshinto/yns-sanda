@@ -410,8 +410,47 @@ main {
 
 #single,
 #page {
+  & h1:not(.page-title) {
+    font-size: 42px;
+    margin: 50px 0 24px;
+    padding: 0 30px;
+    border-bottom: 2px solid gray;
+    background-color: lightgray;
+  }
+
+  & h2,
+  & h3 {
+    margin-top: 50px 0 32px;
+    padding: 0 30px;
+    border-left: 5px solid #eee;
+  }
+
+  & h4,
+  & h5 {
+    background-color: #f5f5f5;
+  }
+
+  & h4 {
+    border-bottom: 2px solid gray;
+  }
+
+  & h5 {
+    border-bottom: 2px dotted gray;
+  }
+
+  & h6 {
+    border-bottom: 2px dotted gray;
+  }
+
+  & h4,
+  & h5,
+  & h6 {
+    margin: 50px 0 24px;
+    padding: 5px;
+  }
+  
   & p {
-    margin: 15px 0;
+    margin: 16px 0;
     line-height: 2;
   }
 
@@ -431,8 +470,9 @@ main {
     aspect-ratio: 16 / 9;
   }
 
-  .wp-block-heading {
-    margin: 50px 0 25px;
+  & h2 {
+    font-size: 32px;
+    margin: 32px 0 16px;
   }
 
   .wp-block-heading.wp-block-heading.has-text-align-center {
@@ -505,7 +545,7 @@ main {
 
 #single {
   & ul {
-    margin: 50px 0;
+    margin: 24px 0;
     padding: 20px;
     padding-left: 40px;
     border: 2px double lightgray;
@@ -1009,15 +1049,10 @@ print {
   #single,
   #page {
     & p {
-      margin: 25px 0;
-    }
-
-    & figure {
-      margin: 50px 0 100px;
+      margin: 16px 0;
     }
 
     .wp-block-heading {
-      margin: 100px 0 50px;
       line-height: 1.5;
     }
 
