@@ -208,16 +208,6 @@
         </dl>
       </div>
     </section>
-    <section id="main-tab-menu" class="tab-menu">
-      <ul class="tab-label">
-        <li class="tab-label-item" data-tab="1">プレスリリース</li>
-        <li class="tab-label-item" data-tab="2">スケジュール</li>
-      </ul>
-      <div class="tab-panel-wrap">
-        <?php get_template_part('template-parts/tab-menu', 'press', $args = array('category' => 'press', 'number' => 5, 'panel' => 1)); ?>
-        <?php get_template_part('template-parts/tab-menu', 'seminar', $args = array('category' => 'seminar', 'number' => 5, 'panel' => 2)); ?>
-      </div>
-    </section>
-  </section>
+  </div>
 </main>
 <?php get_footer(); ?>
