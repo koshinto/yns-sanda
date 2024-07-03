@@ -273,6 +273,12 @@ main {
     padding-bottom: 50px;
     background: #eff6fb;
 
+    .service-image {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 25px;
+    }
+
     .services-wrap {
       max-width: 768px;
       margin: 0 auto;

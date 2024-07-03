@@ -96,6 +96,9 @@
           alt="サービス">
         <p class="headline-subtext">サービス</p>
       </div>
+      <div class="service-image">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/新聞販売店向けチラシ_デジタル.jpg" alt="サービス内容">
+      </div>
       <div class="services-wrap">
         <div class="service-item service-google-business">
           <div class="service-head">
